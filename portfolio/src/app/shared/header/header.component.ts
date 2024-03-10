@@ -9,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  openMenu() {
+    let menuElement = document.getElementById('menu');
+    if (menuElement) {
+      menuElement.classList.toggle("change");
+    }
+    
+  }
+
 }
