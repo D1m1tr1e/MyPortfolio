@@ -1,0 +1,19 @@
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 128px;
+    margin: 200px 0px 0px 0px;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    >h2 {
+        margin-left: 1rem;
+        font-size: 48px;
+        color: rgba(255, 153, 0, 1);
+    }
+}

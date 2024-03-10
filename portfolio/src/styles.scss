@@ -1,4 +1,38 @@
-* {
+body {
     margin: 0;
     background-color: rgba(255, 252, 243, 1);
+    display: flex;
+    justify-content: center;
+}
+
+/* syne-800 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 800;
+    src: url('.././src/assets/fonts/syne-v22-latin-800.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* overpass-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Overpass';
+    font-style: normal;
+    font-weight: 700;
+    src: url('.././src/assets/fonts/overpass-v13-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+.fontSyne800 {
+    font-family: 'Syne';
+    font-weight: 800;
+}
+
+.fontOverpass700{
+    font-family: 'Overpass';
+    font-weight: 700;
 }
