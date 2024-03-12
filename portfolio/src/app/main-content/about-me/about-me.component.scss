@@ -1,0 +1,19 @@
+section{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+}
+
+h1{
+    font-size: 78px;
+}
+
+span{
+    font-size: 23px;
+}
+
+.about-me-container{
+    display: flex;
+    justify-content: space-between;
+
+}

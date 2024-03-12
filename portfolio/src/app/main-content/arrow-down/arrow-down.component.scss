@@ -1,0 +1,24 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+}
+
+span {
+    font-size: 23px;
+}
+
+.test {
+    transform: rotate(-90deg);
+    padding: 1rem;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    >div {
+        padding: 1rem;
+    }
+}
