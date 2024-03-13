@@ -1,19 +1,66 @@
-section{
+section {
     display: flex;
     flex-direction: column;
     max-width: 1440px;
 }
 
-h1{
+h1 {
     font-size: 78px;
 }
 
-span{
+span {
     font-size: 23px;
 }
 
-.about-me-container{
+button {
+    padding: 20px 60px 20px 60px;
+    margin: 5rem;
+    background-color: unset;
+    border: 4px solid black;
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 100ms ease-out;
+
+    &:hover {
+        transition: all 100ms ease-out;
+        padding: 20px 80px 20px 80px;
+        font-weight: bold;
+    }
+}
+
+.about-me-container {
     display: flex;
     justify-content: space-between;
+    gap: 10rem;
+}
 
+.description-container {
+    >div {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.aboutMeImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &:hover {
+        .imageBorder {
+            opacity: 1;
+            transform: translate(-10px, -10px);
+            transition: all ease-in-out 125ms;
+        }
+    }
+}
+
+.imageBorder {
+    height: 100%;
+    width: 100%;
+    border: solid 3px black;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-in-out 125ms;
 }
