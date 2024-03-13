@@ -6,6 +6,12 @@ section {
 
 h1 {
     font-size: 78px;
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        transition: all 125ms ease-in-out;
+        color: rgba(255, 153, 0, 1);
+    }
 }
 
 span {
