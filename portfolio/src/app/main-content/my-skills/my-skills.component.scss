@@ -1,0 +1,33 @@
+section {
+    max-width: 1440px;
+
+    .skill-container {
+        border: 3px solid black;
+        position: relative;
+        padding: 10rem 0 10rem 0; 
+    }
+}
+
+h2 {
+    font-size: 78px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px 0px 10px;
+}
+
+.title-container{
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 252, 243, 1);
+}
+
+.tools-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    object-fit: contain;
+    column-gap: 10rem;
+
+}
