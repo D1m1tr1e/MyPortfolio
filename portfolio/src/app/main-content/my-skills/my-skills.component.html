@@ -4,18 +4,12 @@
             <h2 class="fontSyne800">My skills</h2>
         </div>
         <div class="tools-container">
-            <img src="../../../assets/img/angular.png" alt="">
-            <img src="../../../assets/img/typescript.png" alt="">
-            <img src="../../../assets/img/javascript.png" alt="">
-            <img src="../../../assets/img/html.png" alt="">
-            <img src="../../../assets/img/css.png" alt="">
-        </div>
-        <div class="tools-container">
-            <img src="../../../assets/img/firebase.png" alt="">
-            <img src="../../../assets/img/git.png" alt="">
-            <img src="../../../assets/img/scrum.png" alt="">
-            <img src="../../../assets/img/api.png" alt="">
-            <img src="../../../assets/img/materialsdesign.png" alt="">
+            @for(skill of skills; track skill.img) {
+                <div>
+                     <img src="../../../assets/img/{{ skill.img }}" alt="">
+                     <p>{{ skill.name }}</p>
+                </div>
+            }
         </div>
     </div>
 </section>
