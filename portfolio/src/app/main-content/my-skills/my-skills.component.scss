@@ -15,9 +15,7 @@ h2 {
     margin: 0px 10px 0px 10px;
 }
 
-p{
-    font-weight: bold;
-}
+
 
 .title-container{
     position: absolute;
@@ -36,22 +34,12 @@ p{
             margin: 1rem 5rem -0.3rem 5rem;
         }
         >p{
+            font-weight: bold;
+            font-size: 16px;
             align-items: center;
             text-align: center;
-            word-wrap: break-words;
             margin-bottom: 2rem;
         }
     }
 }
 
-
-
-/*
-.tools-container {
-    display: flex;
-    justify-content: center;
-    padding: 2rem;
-    object-fit: contain;
-    column-gap: 10rem;
-
-}*/

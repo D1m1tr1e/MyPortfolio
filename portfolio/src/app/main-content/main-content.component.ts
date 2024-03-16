@@ -4,12 +4,14 @@ import { ArrowDownComponent } from './arrow-down/arrow-down.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ArrowRightComponent } from './arrow-right/arrow-right.component';
 import { MySkillsComponent } from './my-skills/my-skills.component';
+import { ArrowLeftComponent } from './arrow-left/arrow-left.component';
+import {MyProjectsComponent} from './my-projects/my-projects.component';
 
 @Component({
   selector: 'app-main-content',
   standalone: true,
   imports: [MyNameSectionComponent, ArrowDownComponent, AboutMeComponent,
-    ArrowRightComponent, MySkillsComponent],
+    ArrowRightComponent, MySkillsComponent, ArrowLeftComponent, MyProjectsComponent],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

@@ -45,7 +45,7 @@ export class MySkillsComponent {
     },
     {
       img: "api.png",
-      name: "Angular"
+      name: "Rest-Api"
     },
     {
       img: "materialdesign.png",
