@@ -1,0 +1,33 @@
+section {
+    max-width: 1440px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem 1rem 3rem;
+}
+
+h2 {
+    font-size: 23px; 
+    color: white;
+}
+
+p {
+    font-size: 16px; 
+    color: white;
+}
+
+.social-media-section {
+    display: flex;
+
+    flex-direction: column;
+
+    >div {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+
+        >img {
+            margin-left: 2rem;
+        }
+    }
+}

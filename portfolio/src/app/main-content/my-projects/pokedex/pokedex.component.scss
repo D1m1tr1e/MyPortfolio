@@ -1,0 +1,14 @@
+section {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    max-width: 1440px;
+
+    >img {
+        padding: 5rem 0 5rem 0;
+    }
+}
+
+h1 {
+    font-size: 48px;
+}

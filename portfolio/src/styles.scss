@@ -16,6 +16,17 @@ body {
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* syne-700 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Syne';
+    font-style: normal;
+    font-weight: 700;
+    src: url('.././src/assets/fonts/syne-v22-latin-700.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 /* overpass-700 - latin */
 @font-face {
     font-display: swap;
@@ -49,9 +60,25 @@ body {
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('.././src/assets/fonts/poppins-v20-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 .fontSyne800 {
     font-family: 'Syne';
     font-weight: 800;
+}
+
+.fontSyne700 {
+    font-family: 'Syne';
+    font-weight: 700;
 }
 
 .fontOverpass700 {
@@ -67,4 +94,9 @@ body {
 .fontOverpass300 {
     font-family: 'Overpass';
     font-weight: 300;
+}
+
+.fontPoppins400{
+    font-family: 'Poppins';
+    font-weight: 400;
 }
