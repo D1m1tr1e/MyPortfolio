@@ -8,7 +8,7 @@ span {
     font-size: 23px;
 }
 
-.test {
+.email-container {
     transform: rotate(-90deg);
     padding: 1rem;
 }
@@ -20,5 +20,29 @@ span {
 
     >div {
         padding: 1rem;
+    }
+}
+
+img {
+    position: relative;
+    animation: arrowBounce 2s infinite;
+}
+
+@keyframes arrowBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
     }
 }

@@ -35,3 +35,11 @@ section {
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
 }
+
+.test{
+    position: absolute;
+    top: 4rem;
+    width: 80%;
+    height: 50%;
+    background-color: red;
+}
