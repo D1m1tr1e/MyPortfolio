@@ -2,12 +2,13 @@
     <div class="intials">
         <h2>[DvS]</h2>
     </div>
-<div class="menu-btn" id="menu" (click)="openMenu()">
-    <div class="bar1"></div>
-    <div class="bar2"></div>
-    <div class="bar3"></div>
-</div>
-<div id="a" class="test">
-    <h1>MENU</h1>
-</div>
+    <div class="btn-container" id="menu-btn" (click)="openMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div id="menu" class="menu-container"
+        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(0%)' : 'translateY(-120%)', 'transition': 'transform 0.5s' }">
+        <h1>MENU</h1>
+    </div>
 </section>

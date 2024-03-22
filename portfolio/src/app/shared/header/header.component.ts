@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { booleanAttribute, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -10,14 +10,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  menuIsOpen = false;
+  menuIsOpen:boolean = false;
 
+  
   openMenu() {
     let menuElement = document.getElementById('menu-btn');
-    if (menuElement) {
+    if (!this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
+      this.menuIsOpen = true;
+    } else if (this.menuIsOpen && menuElement) {
+      menuElement.classList.toggle("change");
+      this.menuIsOpen = false;
     }
   }
 }
-
 
