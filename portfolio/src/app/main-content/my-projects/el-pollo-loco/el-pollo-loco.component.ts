@@ -14,6 +14,7 @@ export class ElPolloLocoComponent {
   showProjectInfo() {
     let imgIsGray = document.getElementById('img-gray');
     let imgIsColored = document.getElementById('img-colored');
+    
     imgIsGray?.classList.add('d-none')
     imgIsColored?.classList.remove('d-none');
   }

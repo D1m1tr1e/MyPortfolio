@@ -1,37 +1,49 @@
 section {
     display: flex;
+    position: relative;
     justify-content: space-between;
     flex-direction: row-reverse;
     max-width: 1440px;
 
-    >.image- {
+    &:hover {
+        .image-container .imageBorder {
+            opacity: 1;
+            transform: translate(10px, -10px);
+            transition: all ease-in-out 125ms;
+        }
+    }
+
+    >.image-container {
         padding: 5rem 0 5rem 0;
         position: relative;
-
-        &:hover {
-            .imageBorder {
-                opacity: 1;
-                transform: translate(-10px, -10px);
-                transition: all ease-in-out 125ms;
-            }
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-
 h1 {
     font-size: 48px;
+}
+
+.imageBorder {
+    height: 70%;
+    width: 100%;
+    border: solid 3px black;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-in-out 125ms;
 }
 
 .d-none {
     display: none;
 }
 
-.imageBorder {
-    height: 100%;
-    width: 100%;
-    border: solid 3px black;
+.projectDescription {
+    display: flex;
     position: absolute;
-    opacity: 0;
-    transition: all ease-in-out 125ms;
+    top: 10rem;
+    left: 50%;
+    max-width: 10rem;
+    border: 1px solid black;
 }
