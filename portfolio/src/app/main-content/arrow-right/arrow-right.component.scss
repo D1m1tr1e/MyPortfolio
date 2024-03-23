@@ -1,6 +1,31 @@
-.arrow-container {
+section {
     display: flex;
+    position: relative;
     justify-content: flex-end;
-    margin: 2rem 9rem 2rem 0;
     max-width: 1440px;
+    height: 25rem;
+    margin-right: 5rem;
+}
+
+.startMovingArrow {
+    >div {
+        >img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            animation: arrowMove 0.5s linear forwards;
+        }
+    } 
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translate(0, 0);
+        /* Startposition */
+    }
+
+    100% {
+        transform: translate(-60%, 60%);
+        /* Endposition */
+    }
 }
