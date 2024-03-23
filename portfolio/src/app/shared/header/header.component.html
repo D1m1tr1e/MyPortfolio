@@ -1,4 +1,6 @@
 <section>
+    <!--HEADER SECTION-->
+
     <div class="intials">
         <h2>[DvS]</h2>
     </div>
@@ -7,8 +9,31 @@
         <div class="bar2"></div>
         <div class="bar3"></div>
     </div>
+
+    <!--MENU SECTION-->
+
     <div id="menu" class="menu-container"
-        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(0%)' : 'translateY(-120%)', 'transition': 'transform 0.5s' }">
-        <h1>MENU</h1>
-    </div>
-</section>
+        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(4rem)' : 'translateY(-51rem)', 'transition': 'transform 0.5s' }">
+        <div class="link-container">
+    
+            <a href="#about-me" class="fontSyne700" (click)="closeMenu()">About me</a>
+            <a href="#my-skills" class="fontSyne700" (click)="closeMenu()">My Skills</a>
+            <a href="#portfolio" class="fontSyne700" (click)="closeMenu()">Portfolio</a>
+        </div>
+
+        <div >
+            <div class="contact-menu-container">
+                <h1 class="fontSyne800">Say Hi!</h1>
+
+                <div class="social-media-section">
+                    <span class="fontOverpass300">dimitriek&#64;hotmail.de</span>
+                    <div>
+                        <img src="../../../assets/img/github-icon.png" alt="">
+                        <img src="../../../assets/img/email-icon.png" alt="">
+                        <img src="../../../assets/img/linkedin-icon.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>

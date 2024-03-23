@@ -10,9 +10,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  menuIsOpen:boolean = false;
+  menuIsOpen: boolean = false;
 
-  
   openMenu() {
     let menuElement = document.getElementById('menu-btn');
     if (!this.menuIsOpen && menuElement) {
@@ -23,5 +22,16 @@ export class HeaderComponent {
       this.menuIsOpen = false;
     }
   }
+
+  closeMenu() {
+    this.menuIsOpen = false;
+    let menuElement = document.getElementById('menu-btn');
+    if (menuElement) {
+      menuElement.classList.toggle("change");
+    }
+  }
+
+
 }
+
 
