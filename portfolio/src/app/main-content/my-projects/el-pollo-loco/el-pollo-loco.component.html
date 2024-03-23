@@ -1,4 +1,8 @@
-<section>
+<section (mouseover)="showProjectInfo()" (mouseleave)="hideProjectInfo()">
     <h1 class="fontSyne700">01/03</h1>
-    <img src="../../../../assets/img/pollo-loco-gray.png" alt="">
+    <div class="image-contaier">
+        <img id="img-gray" src="../../../../assets/img/pollo-loco-gray.png" alt="">
+        <img id="img-colored" class="d-none" src="../../../../assets/img/pollo-loco-colored.png" alt="">
+    </div>
+    <div class="imageBorder"></div>
 </section>

@@ -10,8 +10,4 @@ import { CommonModule } from '@angular/common';
 })
 export class ArrowRightComponent {
 
-  /*startAnimationArrow() {
-    document.getElementById('arrowMove')?.classList.add('startMovingArrow');
-  }*/
-
 }

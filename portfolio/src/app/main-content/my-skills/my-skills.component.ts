@@ -51,7 +51,5 @@ export class MySkillsComponent {
       img: "materialdesign.png",
       name: "Material Design"
     }
-
   ]
-
 }
