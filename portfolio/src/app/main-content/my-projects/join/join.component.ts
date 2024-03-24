@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
 })
 export class JoinComponent {
 
- showProjectInfo() {
+  showProjectInfo() {
     document.getElementById('img-gray')?.classList.add('d-none')
     document.getElementById('img-colored')?.classList.remove('d-none');
     console.log('maus ist da');
-    
+
   }
 
   hideProjectInfo() {
@@ -22,5 +22,4 @@ export class JoinComponent {
     document.getElementById('img-colored')?.classList.add('d-none');
     console.log('maus nicht da');
   }
-
 }

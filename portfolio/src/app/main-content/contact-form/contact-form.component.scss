@@ -14,6 +14,13 @@ h1 {
     color: white;
     font-size: 78px;
     padding: 5rem 0 0 3rem;
+    transition: all 125ms ease-in-out;
+    max-width: 27rem;
+
+    &:hover {
+        transition: all 125ms ease-in-out;
+        color: rgba(89, 136, 255, 1);
+    }
 }
 
 h3 {
@@ -22,9 +29,30 @@ h3 {
     margin: 0;
 }
 
-p{
+p {
     color: white;
     font-size: 23px;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(89, 136, 255, 1);
+    transition: all 125ms ease-in-out;
+
+    &:hover {
+        transition: all 125ms ease-in-out;
+        font-weight: bold;
+    }
+}
+
+
+span {
+    color: white;
+    margin-left: 0.5rem;
+}
+
+.checkbox-contaier {
+    display: flex;
 }
 
 input[type=text],
@@ -59,7 +87,7 @@ input[type=submit] {
     padding: 12px 20px;
     border: 3px solid gray;
     cursor: pointer;
-    margin: 0 auto; 
+    margin: 20px auto 0;
     display: block;
     font-family: 'Overpass';
     font-weight: 400;
@@ -70,12 +98,40 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-.container {
+.form-container {
     padding: 20px;
 }
 
-.form-title{
+.form-title {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.arrow-up-footer {
+    position: relative;
+    top: -3rem;
+    left: 84.5rem;
+    animation: arrowBounce 2s infinite;
+    cursor: pointer;
+    max-width: 3rem;
+}
+
+@keyframes arrowBounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
     }
+
+    40% {
+        transform: translateY(30px);
+    }
+
+    60% {
+        transform: translateY(15px);
+    }
+}
