@@ -11,6 +11,21 @@ section {
             transform: translate(10px, -10px);
             transition: all ease-in-out 125ms;
         }
+
+        .image-container .arrow-container {
+            opacity: 1;
+        }
+
+        .arrow-container {
+            >img {
+                transform: scale(1.5) rotate(-130deg);
+            }
+        }
+
+        .projectDescription {
+            opacity: 1;
+            transform: translateX(50%);
+        }
     }
 
     >.image-container {
@@ -26,6 +41,19 @@ h1 {
     font-size: 48px;
 }
 
+h2 {
+    font-size: 45px;
+}
+
+span {
+    font-size: 23px;
+    color: rgba(89, 136, 255, 1);
+}
+
+p {
+    font-size: 16px;
+}
+
 .imageBorder {
     height: 70%;
     width: 100%;
@@ -35,15 +63,36 @@ h1 {
     transition: all ease-in-out 125ms;
 }
 
-.d-none {
-    display: none;
-}
-
 .projectDescription {
     display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 10rem;
-    left: 50%;
-    max-width: 10rem;
-    border: 1px solid black;
+    top: 8rem;
+    //left: 50%;
+    opacity: 0;
+    left: 35%;
+    max-width: 30rem;
+    transition: transform 0.5s ease;
+
+    &:hover {
+        opacity: 1;
+        transform: translateX(50%);
+    }
+}
+
+.arrow-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    left: 35px;
+    top: 40%;
+    opacity: 0;
+
+    >img {
+        transition: transform 0.5s ease;
+    }
+}
+
+.d-none {
+    display: none;
 }
