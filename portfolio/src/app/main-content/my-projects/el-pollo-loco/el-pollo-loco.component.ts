@@ -12,15 +12,11 @@ import { CommonModule } from '@angular/common';
 export class ElPolloLocoComponent {
 
   showProjectInfo() {
-    let imgIsGray = document.getElementById('img-gray');
-    let imgIsColored = document.getElementById('img-colored');
-    
-    imgIsGray?.classList.add('d-none')
-    imgIsColored?.classList.remove('d-none');
+    document.getElementById('img-gray')?.classList.add('d-none')
+    document.getElementById('img-colored')?.classList.remove('d-none');
   }
 
   hideProjectInfo() {
-    console.log('maus nicht da');
     document.getElementById('img-gray')?.classList.remove('d-none');
     document.getElementById('img-colored')?.classList.add('d-none');
   }

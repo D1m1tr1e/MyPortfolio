@@ -68,16 +68,10 @@ p {
     flex-direction: column;
     position: absolute;
     top: 8rem;
-    //left: 50%;
     opacity: 0;
     left: 35%;
     max-width: 30rem;
     transition: transform 0.5s ease;
-
-    &:hover {
-        opacity: 1;
-        transform: translateX(50%);
-    }
 }
 
 .arrow-container {
