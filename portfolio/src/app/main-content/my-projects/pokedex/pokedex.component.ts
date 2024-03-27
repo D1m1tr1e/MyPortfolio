@@ -9,4 +9,14 @@ import { Component } from '@angular/core';
 })
 export class PokedexComponent {
 
+  showProjectInfo() {
+    document.getElementById('img-gray-pokedex')?.classList.add('d-none')
+    document.getElementById('img-colored-pokedex')?.classList.remove('d-none');
+  }
+
+  hideProjectInfo() {
+    document.getElementById('img-gray-pokedex')?.classList.remove('d-none');
+    document.getElementById('img-colored-pokedex')?.classList.add('d-none');
+  }
+
 }

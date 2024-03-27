@@ -4,8 +4,35 @@ section {
     max-width: 1440px;
     position: relative;
 
-    >img {
+    &:hover {
+        .image-container .imageBorder {
+            opacity: 1;
+            transform: translate(-10px, -10px);
+            transition: all ease-in-out 125ms;
+        }
+
+        .image-container .arrow-container {
+            opacity: 1;
+        }
+
+        .arrow-container {
+            >img {
+                transform: scale(1.5) rotate(-130deg);
+            }
+        }
+
+        .projectDescription {
+            opacity: 1;
+            transform: translateX(-50%);
+        }
+    }
+
+    >.image-container {
         padding: 5rem 0 5rem 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -13,6 +40,51 @@ h1 {
     font-size: 48px;
 }
 
+h2 {
+    font-size: 45px;
+}
+
+span {
+    font-size: 23px;
+    color: rgba(89, 136, 255, 1);
+}
+
+p {
+    font-size: 16px;
+}
+
+.imageBorder {
+    height: 70%;
+    width: 100%;
+    border: solid 3px black;
+    position: absolute;
+    opacity: 0;
+    transition: all ease-in-out 125ms;
+}
+
+.projectDescription {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8rem;
+    opacity: 0;
+    left: 35%;
+    max-width: 30rem;
+    transition: transform 0.5s ease;
+}
+
+.arrow-container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    left: -590px;
+    top: 40%;
+    opacity: 0;
+
+    >img {
+        transition: transform 0.5s ease;
+    }
+}
 .d-none{
     display: none;
 }

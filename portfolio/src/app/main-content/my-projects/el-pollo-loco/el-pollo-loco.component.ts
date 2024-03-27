@@ -12,13 +12,13 @@ import { CommonModule } from '@angular/common';
 export class ElPolloLocoComponent {
 
   showProjectInfo() {
-    document.getElementById('img-gray')?.classList.add('d-none')
-    document.getElementById('img-colored')?.classList.remove('d-none');
+    document.getElementById('img-gray-el-pollo')?.classList.add('d-none')
+    document.getElementById('img-colored-el-pollo')?.classList.remove('d-none');
   }
 
   hideProjectInfo() {
-    document.getElementById('img-gray')?.classList.remove('d-none');
-    document.getElementById('img-colored')?.classList.add('d-none');
+    document.getElementById('img-gray-el-pollo')?.classList.remove('d-none');
+    document.getElementById('img-colored-el-pollo')?.classList.add('d-none');
   }
 
 }
