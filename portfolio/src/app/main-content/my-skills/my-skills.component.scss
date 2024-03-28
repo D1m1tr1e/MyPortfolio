@@ -4,7 +4,7 @@ section {
     .skill-container {
         border: 3px solid black;
         position: relative;
-        padding: 10rem 5rem 10rem 5rem; 
+        padding: 10rem 5rem 10rem 5rem;
     }
 }
 
@@ -21,9 +21,7 @@ h2 {
     }
 }
 
-
-
-.title-container{
+.title-container {
     position: absolute;
     top: -10px;
     left: 50%;
@@ -31,16 +29,23 @@ h2 {
     background-color: rgba(255, 252, 243, 1);
 }
 
-.tools-container{ 
+.tools-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    >div{
-        >img{
+
+    >div {
+        >img {
             margin: 1rem 5rem 0rem 5rem;
+            transition: all 125ms ease-in-out;
+
+            &:hover {
+                transition: 125ms all ease-in-out;
+                transform: scale(1.2) translateY(-10%);
+            }
         }
 
-        >p{
+        >p {
             font-weight: bold;
             font-size: 16px;
             align-items: center;
@@ -49,4 +54,3 @@ h2 {
         }
     }
 }
-

@@ -54,6 +54,22 @@ p {
     font-size: 16px;
 }
 
+button {
+    padding: 10px 30px 10px 30px;
+    background-color: unset;
+    margin-right: 1rem;
+    border: 4px solid black;
+    font-size: 23px;
+    cursor: pointer;
+    transition: all 125ms ease-out;
+
+    &:hover {
+        transition: all 125ms ease-out;
+        padding: 10px 40px 10px 40px;
+        font-weight: bold;
+    }
+}
+
 .imageBorder {
     height: 70%;
     width: 100%;

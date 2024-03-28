@@ -98,7 +98,6 @@ a:hover::before {
     background-image: url('../../../assets/img/bg-contact-section.png');
     width: 100%;
     padding-top: 2rem;
-
 }
 
 .social-media-section {
@@ -110,6 +109,12 @@ a:hover::before {
     >div {
         >img {
             margin-left: 3rem;
+            transition: all 125ms ease-in-out;
+
+            &:hover {
+                transition: 125ms all ease-in-out;
+                transform: scale(1.2) translateY(-20%);
+            }
         }
     }
 }

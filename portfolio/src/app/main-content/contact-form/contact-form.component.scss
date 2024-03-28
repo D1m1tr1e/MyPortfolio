@@ -3,6 +3,7 @@ section {
     width: 100%;
     max-width: 1440px;
     margin: 0;
+    position: relative;
 
     >div {
         display: flex;
@@ -109,9 +110,9 @@ input[type=submit]:hover {
 }
 
 .arrow-up-footer {
-    position: relative;
-    top: -3rem;
-    left: 84.5rem;
+    position: absolute;
+    bottom: 50px;
+    right: 42px;
     animation: arrowBounce 2s infinite;
     cursor: pointer;
     max-width: 3rem;
