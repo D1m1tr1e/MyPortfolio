@@ -18,7 +18,7 @@
             <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
 
             <div class="checkbox-container">
-                <input type="checkbox" id="policy" name="private-policy" value="">
+                <input type="checkbox" (click)="acceptPolicy()" id="checkbox" name="private-policy" value="">
                 <span>
                     I've read the <a href="imprint"> privacy policy</a> and agree to the processing of my data as
                     outlined.
