@@ -9,13 +9,25 @@
     </div>
 
     <div class="form-container">
-        <form action="action_page.php">
+        <form action="action_page.php" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
-            <input type="text" id="fname" name="name" placeholder="Your name">
+            <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" type="text" id="fname" name="name"
+                placeholder="Your name" required>
+            @if (!name.valid && name.touched) {
+            <h5>Please enter your name</h5>
+            }
 
-            <input type="text" id="lname" name="mail" placeholder="Your mail">
+            <input [(ngModel)]="contactData.email" #email="ngModel" type="text" id="mail" name="mail"
+                placeholder="Your mail" required pattern="[^@]+@[^\.]+\..+">
+            @if (!email.valid && email.touched) {
+            <h5>Please enter valid e-mail adress</h5>
+            }
 
-            <textarea id="subject" name="subject" placeholder="Your message" style="height:200px"></textarea>
+            <textarea [(ngModel)]="contactData.message" #message="ngModel" minlength="4" id="subject" name="subject"
+                placeholder="Your message" style="height:200px" required></textarea>
+            @if (!message.valid && message.touched) {
+            <h5>Please enter a Message</h5>
+            }
 
             <div class="checkbox-container">
                 <input type="checkbox" (click)="acceptPolicy()" id="checkbox" name="private-policy" value="">
@@ -24,8 +36,12 @@
                     outlined.
                 </span>
             </div>
+            @if (!checkboxIsChecked && sendButtonClicked)
+            {
+                <h5>Please accept the policy</h5>
+            }
 
-            <input type="submit" value="Send message">
+            <input (click)="sendMessage()" type="submit" value="Send message" [disabled]="!name.valid || !message.valid || !email.valid || !checkboxIsChecked" [style.cursor]="(name.valid && message.valid && email.valid && !checkboxIsChecked) ? 'pointer' : 'not-allowed'">
         </form>
     </div>
 
@@ -34,5 +50,5 @@
             <img src="../../../assets/img/arow-up-footer.png" alt="">
         </a>
     </div>
-    
+
 </section>
