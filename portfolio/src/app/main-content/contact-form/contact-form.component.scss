@@ -34,9 +34,16 @@ h5 {
     position: absolute;
     color: red;
     margin-top: -1rem;
-
-    left: 16.5rem;
     font-style: italic;
+    font-size: 13px;
+}
+
+h6 {
+    position: absolute;
+    color: red;
+    margin-top: 0.1rem;
+    font-style: italic;
+    font-size: 13px;
 }
 
 p {
@@ -101,11 +108,23 @@ input[type=submit] {
     font-family: 'Overpass';
     font-weight: 400;
     font-size: 23px;
+    transition: all 125ms ease-in-out;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+.hoverIfAcceptPolicy {
+    color: white !important;
+    border-color: white !important;
+
+    &:hover{
+        transition: all 125ms ease-in-out;
+        padding: 12px 40px;
+    }
+
 }
+
+/*input[type=submit]:hover {
+    background-color: #45a049;
+}*/
 
 .form-container {
     padding: 20px;

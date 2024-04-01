@@ -14,19 +14,19 @@
             <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" type="text" id="fname" name="name"
                 placeholder="Your name" required>
             @if (!name.valid && name.touched) {
-            <h5>Please enter your name</h5>
+            <h5>Your name is required</h5>
             }
 
             <input [(ngModel)]="contactData.email" #email="ngModel" type="text" id="mail" name="mail"
                 placeholder="Your mail" required pattern="[^@]+@[^\.]+\..+">
             @if (!email.valid && email.touched) {
-            <h5>Please enter valid e-mail adress</h5>
+            <h5>Your e-mail is required</h5>
             }
 
             <textarea [(ngModel)]="contactData.message" #message="ngModel" minlength="4" id="subject" name="subject"
                 placeholder="Your message" style="height:200px" required></textarea>
             @if (!message.valid && message.touched) {
-            <h5>Please enter a Message</h5>
+            <h5>Yout message is empty</h5>
             }
 
             <div class="checkbox-container">
@@ -38,10 +38,10 @@
             </div>
             @if (!checkboxIsChecked && sendButtonClicked)
             {
-                <h5>Please accept the policy</h5>
+                <h6>Please accept the privacy policy</h6>
             }
 
-            <input (click)="sendMessage()" type="submit" value="Send message" [disabled]="!name.valid || !message.valid || !email.valid || !checkboxIsChecked" [style.cursor]="(name.valid && message.valid && email.valid && !checkboxIsChecked) ? 'pointer' : 'not-allowed'">
+            <input (click)="sendMessage()" id="send-btn" type="submit" value="Send message">
         </form>
     </div>
 

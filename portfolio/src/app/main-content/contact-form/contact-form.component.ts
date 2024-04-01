@@ -10,13 +10,27 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactFormComponent {
 
-  checkboxIsChecked = false;
-  sendButtonClicked = false;
+  checkboxIsChecked:boolean = false;
+  checkboxIsTouched:boolean = false
+  sendButtonClicked:boolean = false;
 
   acceptPolicy() {
-    this.checkboxIsChecked = !this.checkboxIsChecked;
-    console.log(this.checkboxIsChecked);
+    let checkbox = document.getElementById("checkbox") as HTMLInputElement;;
+    if (checkbox) {
+      checkbox.addEventListener("change", () => {
+        if (checkbox.checked) {
+          console.log('ok');
+          this.checkboxIsChecked = true;
+         document.getElementById('send-btn')?.classList.add('hoverIfAcceptPolicy');
+        } else {
+          console.log('nok');
+          this.checkboxIsChecked = false;
+          document.getElementById('send-btn')?.classList.remove('hoverIfAcceptPolicy');
+        }
+      });
+    }
   }
+
 
   sendMessage() {
     this.sendButtonClicked = true;
