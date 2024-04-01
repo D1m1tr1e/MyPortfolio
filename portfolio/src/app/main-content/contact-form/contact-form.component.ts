@@ -10,9 +10,9 @@ import { FormsModule, NgForm } from '@angular/forms';
 })
 export class ContactFormComponent {
 
-  checkboxIsChecked:boolean = false;
-  checkboxIsTouched:boolean = false
-  sendButtonClicked:boolean = false;
+  checkboxIsChecked: boolean = false;
+  checkboxIsTouched: boolean = false
+  sendButtonClicked: boolean = false;
 
   acceptPolicy() {
     let checkbox = document.getElementById("checkbox") as HTMLInputElement;;
@@ -21,7 +21,7 @@ export class ContactFormComponent {
         if (checkbox.checked) {
           console.log('ok');
           this.checkboxIsChecked = true;
-         document.getElementById('send-btn')?.classList.add('hoverIfAcceptPolicy');
+          document.getElementById('send-btn')?.classList.add('hoverIfAcceptPolicy');
         } else {
           console.log('nok');
           this.checkboxIsChecked = false;
@@ -45,13 +45,12 @@ export class ContactFormComponent {
   onSubmit(ngForm: NgForm) {
     if (ngForm.valid && ngForm.submitted) {
       console.log(this.contactData)
-      /* this.contactData = {
-         name: "",
-         email: "",
-         message: ""
-       };
-       ngForm.resetForm(); // Zurücksetzen des Formulars
- */
+      this.contactData = {
+        name: "",
+        email: "",
+        message: ""
+      };
+      ngForm.resetForm();
     }
   }
 
