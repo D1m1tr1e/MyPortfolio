@@ -5,6 +5,10 @@ h1 {
     font-size: 128px;
     margin-top: 200px;
     margin-bottom: 0px;
+
+    @media only screen and (max-width: 1070px) {
+        font-size: 100px;
+    }
 }
 
 div {
@@ -15,6 +19,16 @@ div {
     >h2 {
         margin-left: 1rem;
         font-size: 48px;
-        color:rgba(89, 136, 255, 1);
+        color: rgba(89, 136, 255, 1);
+
+        @media only screen and (max-width: 1070px) {
+            font-size: 34px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1070px) {
+    img {
+        width: 28rem;
     }
 }

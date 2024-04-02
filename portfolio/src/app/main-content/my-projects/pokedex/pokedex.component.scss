@@ -5,6 +5,10 @@ section {
     flex-direction: row-reverse;
     max-width: 1440px;
 
+    @media only screen and (max-width: 1480px) {
+        margin: 0 1rem 0 1rem;
+    }
+
     &:hover {
         .image-container .imageBorder {
             opacity: 1;
