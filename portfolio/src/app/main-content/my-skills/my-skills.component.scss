@@ -7,8 +7,7 @@ section {
         padding: 10rem 5rem 10rem 5rem;
 
         @media only screen and (max-width: 1480px) {
-
-                padding: 5rem 2rem 5rem 2rem !important;
+            padding: 5rem 2rem 5rem 2rem !important;
         }
     }
 
@@ -27,6 +26,10 @@ h2 {
     &:hover {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);
+    }
+
+    @media only screen and (max-width: 1300px) {
+        font-size: 67px;
     }
 }
 
@@ -51,6 +54,9 @@ h2 {
             &:hover {
                 transition: 125ms all ease-in-out;
                 transform: scale(1.2) translateY(-10%);
+            }
+            @media only screen and (max-width: 1300px) {
+                height: 3.5rem;
             }
         }
 

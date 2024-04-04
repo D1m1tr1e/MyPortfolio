@@ -13,7 +13,11 @@ h1 {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);
     }
-    
+
+    @media only screen and (max-width: 1300px) {
+        font-size: 67px;
+    }
+
 }
 
 span {
@@ -34,6 +38,18 @@ button {
         padding: 20px 80px 20px 80px;
         font-weight: bold;
     }
+
+    @media only screen and (max-width: 1040px) {
+        padding: 15px 40px 15px 40px;
+
+        &:hover {
+            padding: 15px 60px 15px 60px;
+        }
+    }
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
 }
 
 .about-me-container {
@@ -44,6 +60,11 @@ button {
     @media only screen and (max-width: 1480px) {
         margin: 0 1rem 0 1rem;
     }
+
+    @media only screen and (max-width: 840px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
 }
 
 .description-container {
@@ -52,6 +73,7 @@ button {
         justify-content: center;
     }
 }
+
 
 .aboutMeImage {
     display: flex;
@@ -75,4 +97,15 @@ button {
     position: absolute;
     opacity: 0;
     transition: all ease-in-out 125ms;
+
+    @media only screen and (max-width: 840px) {
+        height: 100%;
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    img {
+        width: 25rem;
+    }
 }

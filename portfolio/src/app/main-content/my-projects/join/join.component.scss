@@ -4,6 +4,14 @@ section {
     max-width: 1440px;
     position: relative;
 
+    >.image-container {
+        padding: 5rem 0 5rem 0;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     @media only screen and (max-width: 1480px) {
         margin: 0 1rem 0 1rem;
     }
@@ -29,14 +37,6 @@ section {
             opacity: 1;
             transform: translateX(-50%);
         }
-    }
-
-    >.image-container {
-        padding: 5rem 0 5rem 0;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 }
 
@@ -80,6 +80,10 @@ button {
     position: absolute;
     opacity: 0;
     transition: all ease-in-out 125ms;
+
+    @media only screen and (max-width: 1236px) {
+        height: 65%;
+    }
 }
 
 .projectDescription {
@@ -88,9 +92,18 @@ button {
     position: absolute;
     top: 8rem;
     opacity: 0;
-    left: 35%;
+    right: 35%;
     max-width: 30rem;
     transition: transform 0.5s ease;
+
+    @media only screen and (max-width: 1340px) {
+        right: 40%;
+    }
+
+    @media only screen and (max-width: 1236px) {
+        top: 3rem;
+        right: 30%
+    }
 }
 
 .arrow-container {
@@ -101,11 +114,38 @@ button {
     top: 40%;
     opacity: 0;
 
+    @media only screen and (max-width: 1236px) {
+        left: -445px;
+    }
+
     >img {
         transition: transform 0.5s ease;
+
+        @media only screen and (max-width: 1236px) {
+            height: 3rem;
+        }
     }
 }
 
 .d-none {
     display: none;
+}
+
+@media only screen and (max-width: 1236px) {
+    h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    #img-gray-join,
+    #img-colored-join {
+        width: 29rem;
+    }
 }

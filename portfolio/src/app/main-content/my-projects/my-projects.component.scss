@@ -17,6 +17,10 @@ h1 {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);
     }
+
+    @media only screen and (max-width: 1300px) {
+        font-size: 67px;
+    }
 }
 
 p {
