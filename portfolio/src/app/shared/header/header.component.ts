@@ -30,8 +30,6 @@ export class HeaderComponent {
       menuElement.classList.toggle("change");
     }
   }
-
-
 }
 
 
