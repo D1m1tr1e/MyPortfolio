@@ -57,6 +57,15 @@ a:hover::before {
     left: 50%;
 }
 
+.intials {
+    z-index: 999;
+}
+
+.btn-container {
+    cursor: pointer;
+    z-index: 999;
+}
+
 .bar1,
 .bar2,
 .bar3 {
@@ -65,7 +74,6 @@ a:hover::before {
     background-color: rgb(1, 1, 1);
     margin: 6px 0;
     transition: 0.4s;
-    cursor: pointer;
 }
 
 .change .bar1 {

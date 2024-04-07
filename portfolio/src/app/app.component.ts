@@ -15,4 +15,7 @@ import { MenuComponent } from './shared/menu/menu.component'
 })
 export class AppComponent {
   title = 'portfolio';
+
+  public menuIsOpen: boolean = false;
+
 }

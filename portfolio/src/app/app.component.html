@@ -1,4 +1,4 @@
-<app-header id="header"></app-header>
-<app-menu></app-menu>
+<app-header id="header" [menuIsOpen]="menuIsOpen"></app-header>
+<app-menu [menuIsOpen]="menuIsOpen"></app-menu>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
