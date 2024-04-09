@@ -4,16 +4,16 @@
     <div class="intials">
         <h2>[DvS]</h2>
     </div>
-    <!-- <div class="btn-container" id="menu-btn" (click)="openMenu()">
+    <div class="btn-container" id="menu-btn" (click)="openMenu()">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
-    </div>-->
+    </div>
 
     <!--MENU SECTION-->
 
-    <!--  <div id="menu" class="menu-container"
-        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(4rem)' : 'translateY(-51rem)', 'transition': 'transform 0.5s' }">
+    <div id="menu" class="menu-container"
+        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(0rem)' : 'translateY(-30rem)', 'transition': 'transform 0.7s, opacity 0.7s ease-in-out', 'opacity': menuIsOpen ? '1' : '0'}">
         <div class="link-container">
 
             <a href="#about-me" class="fontSyne700" (click)="closeMenu()">About me</a>
@@ -35,5 +35,5 @@
                 </div>
             </div>
         </div>
-    </div>-->
+    </div>
 </section>

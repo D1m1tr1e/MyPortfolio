@@ -13,8 +13,8 @@ export class HeaderComponent {
   //public menuIsOpen: boolean = false;
 
   @Input() menuIsOpen: boolean = false;
-
- /*openMenu() {
+  
+openMenu() {
     let menuElement = document.getElementById('menu-btn');
     if (!this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
@@ -34,7 +34,7 @@ export class HeaderComponent {
     if (menuElement) {
       menuElement.classList.toggle("change");
     }
-  }*/
+  }
 }
 
 
