@@ -1,4 +1,4 @@
-import { booleanAttribute, Component, Input, Output, EventEmitter} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 
@@ -12,15 +12,15 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   //public menuIsOpen: boolean = false;
 
-  @Input() menuIsOpen: boolean = false;
-  
-openMenu() {
+  menuIsOpen: boolean = false;
+
+  openMenu() {
     let menuElement = document.getElementById('menu-btn');
     if (!this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
       this.menuIsOpen = true;
       console.log('header', this.menuIsOpen);
-      
+
     } else if (this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
       this.menuIsOpen = false;
