@@ -10,7 +10,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  //public menuIsOpen: boolean = false;
 
   menuIsOpen: boolean = false;
 
@@ -19,12 +18,10 @@ export class HeaderComponent {
     if (!this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
       this.menuIsOpen = true;
-      console.log('header', this.menuIsOpen);
 
     } else if (this.menuIsOpen && menuElement) {
       menuElement.classList.toggle("change");
       this.menuIsOpen = false;
-      console.log('header', this.menuIsOpen);
     }
   }
 
