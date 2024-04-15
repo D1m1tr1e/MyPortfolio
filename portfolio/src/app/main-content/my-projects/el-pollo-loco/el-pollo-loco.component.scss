@@ -169,14 +169,5 @@ button {
         display: flex;
         flex-direction: column; /* Ändere die Flexbox-Ausrichtung auf Spalten */
         align-items: center; /* Zentriere die Elemente horizontal */
-        max-width: 1440px;
-    }
-    h1 {
-        /* Entferne die Positionierung aus den Media Queries */
-        /* right: 20px;
-        top: -10px;
-        position: absolute; */
-        /* Füge stattdessen eine relative Position hinzu */
-        position: relative;
     }
 }
