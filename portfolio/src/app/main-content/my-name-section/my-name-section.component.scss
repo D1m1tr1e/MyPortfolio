@@ -9,6 +9,10 @@ h1 {
     @media only screen and (max-width: 1070px) {
         font-size: 100px;
     }
+
+    @media only screen and (max-width: 860px) {
+        font-size: 70px;
+    }
 }
 
 button {
@@ -45,11 +49,21 @@ div {
         @media only screen and (max-width: 1070px) {
             font-size: 34px;
         }
+
+        @media only screen and (max-width: 860px) {
+            font-size: 20px;
+        }
     }
 }
 
 @media only screen and (max-width: 1070px) {
     img {
         width: 28rem;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    img {
+        width: 20rem;
     }
 }

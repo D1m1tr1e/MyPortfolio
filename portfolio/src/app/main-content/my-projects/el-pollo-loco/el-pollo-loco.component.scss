@@ -105,6 +105,11 @@ button {
         top: 3rem;
         left: 30%
     }
+
+    @media only screen and (max-width: 1080px) {
+        max-width: 20rem;
+        left: 40%;
+    }
 }
 
 .arrow-container {
@@ -148,5 +153,30 @@ button {
     #img-gray-el-pollo,
     #img-colored-el-pollo {
         width: 29rem;
+    }
+}
+
+/*@media only screen and (max-width: 635px) {
+    h1 {
+        right: 20px;
+        top: -10px;
+        position: absolute;
+    }
+}*/
+
+@media only screen and (max-width: 635px) {
+    section {
+        display: flex;
+        flex-direction: column; /* Ändere die Flexbox-Ausrichtung auf Spalten */
+        align-items: center; /* Zentriere die Elemente horizontal */
+        max-width: 1440px;
+    }
+    h1 {
+        /* Entferne die Positionierung aus den Media Queries */
+        /* right: 20px;
+        top: -10px;
+        position: absolute; */
+        /* Füge stattdessen eine relative Position hinzu */
+        position: relative;
     }
 }

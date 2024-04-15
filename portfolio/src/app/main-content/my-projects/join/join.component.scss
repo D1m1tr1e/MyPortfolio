@@ -104,6 +104,11 @@ button {
         top: 3rem;
         right: 30%
     }
+
+    @media only screen and (max-width: 1080px) {
+        max-width: 20rem;
+        right: 40%;
+    }
 }
 
 .arrow-container {
@@ -147,5 +152,13 @@ button {
     #img-gray-join,
     #img-colored-join {
         width: 29rem;
+    }
+}
+
+@media only screen and (max-width: 635px) {
+    h1 {
+        left: 20px;
+        top: -10px;
+        position: absolute;
     }
 }

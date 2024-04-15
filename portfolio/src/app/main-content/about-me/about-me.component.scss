@@ -9,15 +9,23 @@ h1 {
     font-size: 78px;
     transition: all 125ms ease-in-out;
 
+
     &:hover {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);
+    }
+
+    @media only screen and (max-width: 1480px) {
+        margin-left: 1rem;
     }
 
     @media only screen and (max-width: 1300px) {
         font-size: 67px;
     }
 
+    @media only screen and (max-width: 860px) {
+        font-size: 50px;
+    }
 }
 
 span {
