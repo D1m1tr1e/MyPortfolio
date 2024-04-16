@@ -5,7 +5,7 @@ section {
     position: relative;
 
     >.image-container {
-        padding: 5rem 0 5rem 0;
+        padding: 7rem 0 5rem 0;
         position: relative;
         display: flex;
         justify-content: center;
@@ -19,7 +19,7 @@ section {
     &:hover {
         .image-container .imageBorder {
             opacity: 1;
-            transform: translate(-10px, -10px);
+            transform: translate(-10px, -0px);
             transition: all ease-in-out 125ms;
         }
 
@@ -30,6 +30,10 @@ section {
         .arrow-container {
             >img {
                 transform: scale(1.5) rotate(-130deg);
+
+                @media only screen and (max-width: 935px) {
+                    rotate: (90deg);
+                }
             }
         }
 
@@ -109,6 +113,12 @@ button {
         max-width: 20rem;
         right: 40%;
     }
+
+    @media only screen and (max-width: 935px) {
+        top: 27rem;
+        right: -10rem;
+        max-width: 27rem;
+    }
 }
 
 .arrow-container {
@@ -123,11 +133,19 @@ button {
         left: -445px;
     }
 
+    @media only screen and (max-width: 935px) {
+        top: 95%;
+        left: -330px;
+    }
+
     >img {
         transition: transform 0.5s ease;
 
         @media only screen and (max-width: 1236px) {
             height: 3rem;
+        }
+        @media only screen and (max-width: 935px) {
+            height: 2rem;
         }
     }
 }
@@ -155,10 +173,16 @@ button {
     }
 }
 
-@media only screen and (max-width: 635px) {
+@media only screen and (max-width: 935px) {
+    section {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 20rem;
+    }
+
     h1 {
-        left: 20px;
-        top: -10px;
         position: absolute;
+        left: 23px;
     }
 }

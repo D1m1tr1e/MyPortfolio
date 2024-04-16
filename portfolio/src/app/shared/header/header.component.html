@@ -12,8 +12,12 @@
 
     <!--MENU SECTION-->
 
-    <div id="menu" class="menu-container"
-        [ngStyle]="{ 'transform': menuIsOpen ? 'translateY(0rem)' : 'translateY(-30rem)', 'transition': 'transform 0.7s, opacity 0.7s ease-in-out', 'opacity': menuIsOpen ? '1' : '0'}">
+    <div id="menu" class="menu-container" [ngStyle]="
+            { 
+            'transform': menuIsOpen ? 'translateY(0rem)' : 'translateY(-90rem)',
+            'transition': 'transform 0.7s, opacity 0.7s ease-in-out',
+            'opacity': menuIsOpen ? '1' : '0',
+            }">
         <div class="link-container">
             <a href="#about-me" class="fontSyne700" (click)="closeMenu()">About me</a>
             <a href="#my-skills" class="fontSyne700" (click)="closeMenu()">My Skills</a>

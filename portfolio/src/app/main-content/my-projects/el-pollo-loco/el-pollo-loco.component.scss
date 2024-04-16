@@ -6,7 +6,7 @@ section {
     max-width: 1440px;
 
     >.image-container {
-        padding: 5rem 0 5rem 0;
+        padding: 7rem 0 5rem 0;
         position: relative;
         display: flex;
         justify-content: center;
@@ -20,7 +20,7 @@ section {
     &:hover {
         .image-container .imageBorder {
             opacity: 1;
-            transform: translate(10px, -10px);
+            transform: translate(10px, -0px);
             transition: all ease-in-out 125ms;
         }
 
@@ -31,6 +31,10 @@ section {
         .arrow-container {
             >img {
                 transform: scale(1.5) rotate(-130deg);
+
+                @media only screen and (max-width: 935px) {
+                    rotate: (-180deg);
+                }
             }
         }
 
@@ -110,6 +114,12 @@ button {
         max-width: 20rem;
         left: 40%;
     }
+
+    @media only screen and (max-width: 935px) {
+        top: 27rem;
+        left: -10rem;
+        max-width: 27rem;
+    }
 }
 
 .arrow-container {
@@ -124,11 +134,20 @@ button {
         left: 30px;
     }
 
+    @media only screen and (max-width: 935px) {
+        top: 95%;
+        left: -100px;
+    }
+
     >img {
         transition: transform 0.5s ease;
 
         @media only screen and (max-width: 1236px) {
             height: 3rem;
+        }
+
+        @media only screen and (max-width: 935px) {
+            height: 2rem;
         }
     }
 }
@@ -156,18 +175,16 @@ button {
     }
 }
 
-/*@media only screen and (max-width: 635px) {
-    h1 {
-        right: 20px;
-        top: -10px;
-        position: absolute;
-    }
-}*/
-
-@media only screen and (max-width: 635px) {
+@media only screen and (max-width: 935px) {
     section {
         display: flex;
-        flex-direction: column; /* Ändere die Flexbox-Ausrichtung auf Spalten */
-        align-items: center; /* Zentriere die Elemente horizontal */
+        justify-content: center;
+        position: relative;
+        margin-bottom: 15rem;
+    }
+
+    h1 {
+        position: absolute;
+        right: 23px;
     }
 }
