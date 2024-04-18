@@ -13,6 +13,10 @@ h1 {
     @media only screen and (max-width: 860px) {
         font-size: 70px;
     }
+
+    @media only screen and (max-width: 620px) {
+        font-size: 50px;
+    }
 }
 
 button {
@@ -29,10 +33,19 @@ button {
         transition: all 100ms ease-out;
         padding: 20px 80px 20px 80px;
         font-weight: bold;
+
+      @media only screen and (max-width: 620px) {
+            padding: 10px 50px 10px 50px;
+        }
     }
 
     @media only screen and (max-width: 1000px) {
         display: block;
+    }
+
+   @media only screen and (max-width: 620px) {
+        padding: 10px 40px 10px 40px;
+        font-size: 15px;
     }
 }
 
@@ -65,5 +78,11 @@ div {
 @media only screen and (max-width: 860px) {
     img {
         width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    img {
+        width: 13rem;
     }
 }

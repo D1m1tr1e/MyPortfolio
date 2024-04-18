@@ -26,10 +26,18 @@ h1 {
     @media only screen and (max-width: 860px) {
         font-size: 50px;
     }
+
+    @media only screen and (max-width: 620px) {
+        font-size: 38px;
+    }
 }
 
 span {
     font-size: 23px;
+
+    @media only screen and (max-width: 620px) {
+        font-size: 18px;
+    }
 }
 
 button {
@@ -108,12 +116,23 @@ button {
 
     @media only screen and (max-width: 840px) {
         height: 100%;
-        width: 50%;
+        width: 25rem;
+    }
+
+    @media only screen and (max-width: 620px) {
+        height: 100%;
+        width: 18rem;
     }
 }
 
 @media only screen and (max-width: 1130px) {
     img {
         width: 25rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    img{
+        width: 18rem;
     }
 }

@@ -11,6 +11,10 @@ section {
 
 span {
     font-size: 23px;
+
+    @media only screen and (max-width: 620px) {
+        font-size: 18px;
+    }
 }
 
 .email-container {
@@ -31,6 +35,10 @@ span {
 img {
     position: relative;
     animation: arrowBounce 2s infinite;
+
+    @media only screen and (max-width: 620px) {
+        height: 8rem;
+    }
 }
 
 @keyframes arrowBounce {
