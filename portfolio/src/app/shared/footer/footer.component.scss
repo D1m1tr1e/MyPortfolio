@@ -4,6 +4,10 @@ section {
     display: flex;
     justify-content: space-between;
     padding: 0 3rem 1rem 3rem;
+
+    @media only screen and (max-width: 580px) {
+        display: block;
+    }
 }
 
 h2 {
@@ -14,6 +18,10 @@ h2 {
 p {
     color: white;
     margin-top: -1rem;
+
+    @media only screen and (max-width: 580px) {
+        display: none;
+    }
 }
 
 a {
@@ -44,9 +52,17 @@ a:hover::before {
     left: 50%;
 }
 
+span {
+    color: white;
+}
+
 .social-media-section {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 580px) {
+        display: none;
+    }
 
     >div {
         display: flex;
@@ -55,6 +71,39 @@ a:hover::before {
 
         >img {
             margin-left: 3rem;
+            transition: all 125ms ease-in-out;
+
+            &:hover {
+                transition: 125ms all ease-in-out;
+                transform: scale(1.2) translateY(-20%);
+            }
+        }
+    }
+}
+
+.intials {
+    @media only screen and (max-width: 580px) {
+        display: none;
+    }
+}
+
+.mobile-view {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 580px) {
+        display: flex;
+    }
+
+    >div {
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+
+        >img {
+            margin: 0.5rem 1rem 0.5rem 1rem;
             transition: all 125ms ease-in-out;
 
             &:hover {

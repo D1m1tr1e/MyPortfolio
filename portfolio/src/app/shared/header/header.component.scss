@@ -18,6 +18,14 @@ h1 {
     width: 27rem;
     transition: all 125ms ease-in-out;
 
+    @media only screen and (max-width: 1060px) {
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 665px) {
+        font-size: 50px;
+    }
+
     &:hover {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);
@@ -27,6 +35,10 @@ h1 {
 span {
     color: white;
     font-size: 23px;
+
+    @media only screen and (max-width: 665px) {
+        font-size: 15px;
+    }
 }
 
 a {
@@ -37,6 +49,18 @@ a {
     margin-bottom: 3.5rem;
     display: inline-block;
     overflow: hidden;
+
+    @media only screen and (max-width: 1060px) {
+        font-size: 60px;
+    }
+
+    @media only screen and (max-width: 665px) {
+        font-size: 50px;
+    }
+
+    @media only screen and (max-width: 560px) {
+        font-size: 40px;
+    }
 }
 
 a::before {
@@ -46,7 +70,7 @@ a::before {
     height: 3px;
     bottom: 0;
     left: 0;
-    background-color: rgb(89,136,255);
+    background-color: rgb(89, 136, 255);
     transform: scaleX(0);
     transition: transform 0.5s ease-in-out, left 0.5s ease-in-out;
     transform-origin: left;
@@ -119,12 +143,17 @@ a:hover::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem 2rem 4rem;
+    padding: 0 4rem 2rem 3rem;
 
     >div {
         >img {
             margin-left: 3rem;
             transition: all 125ms ease-in-out;
+
+            @media only screen and (max-width: 700px) {
+                display: none;
+            }
+
 
             &:hover {
                 transition: 125ms all ease-in-out;
