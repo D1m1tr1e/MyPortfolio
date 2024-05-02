@@ -26,6 +26,10 @@ h1 {
         font-size: 50px;
     }
 
+    @media only screen and (max-width: 560px) {
+        font-size: 40px;
+    }
+
     &:hover {
         transition: all 125ms ease-in-out;
         color: rgba(89, 136, 255, 1);

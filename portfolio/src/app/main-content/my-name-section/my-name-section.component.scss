@@ -17,6 +17,10 @@ h1 {
     @media only screen and (max-width: 620px) {
         font-size: 50px;
     }
+
+    @media only screen and (max-width: 420px) {
+        font-size: 36px;
+    }
 }
 
 button {
@@ -34,7 +38,7 @@ button {
         padding: 20px 80px 20px 80px;
         font-weight: bold;
 
-      @media only screen and (max-width: 620px) {
+        @media only screen and (max-width: 620px) {
             padding: 10px 50px 10px 50px;
         }
     }
@@ -43,7 +47,7 @@ button {
         display: block;
     }
 
-   @media only screen and (max-width: 620px) {
+    @media only screen and (max-width: 620px) {
         padding: 10px 40px 10px 40px;
         font-size: 15px;
     }
@@ -66,6 +70,10 @@ div {
         @media only screen and (max-width: 860px) {
             font-size: 20px;
         }
+
+        @media only screen and (max-width: 420px) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -84,5 +92,11 @@ div {
 @media only screen and (max-width: 860px) {
     img {
         width: 13rem;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    img {
+        width: 8rem;
     }
 }

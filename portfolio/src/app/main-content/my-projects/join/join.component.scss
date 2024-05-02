@@ -78,10 +78,19 @@ button {
     cursor: pointer;
     transition: all 125ms ease-out;
 
+    @media only screen and (max-width: 560px) {
+        font-size: 15px;
+        padding: 6px 20px 6px 20px;
+    }
+
     &:hover {
         transition: all 125ms ease-out;
         padding: 10px 40px 10px 40px;
         font-weight: bold;
+
+        @media only screen and (max-width: 560px) {
+            padding: 6px 30px 6px 30px;
+        }
     }
 }
 
@@ -95,6 +104,10 @@ button {
 
     @media only screen and (max-width: 1236px) {
         height: 65%;
+    }
+
+    @media only screen and (max-width: 520px) {
+        height: 59%;
     }
 }
 
@@ -123,11 +136,10 @@ button {
     }
 
     @media only screen and (max-width: 935px) {
-        /* top: 14rem;
-        right: 14rem;
-        max-width: 26rem;*/
         top: 14rem;
-        right: 1rem;
+        // right: 1rem;
+        right: 3rem;
+        left: 1rem;
         min-width: 85vw;
     }
 
@@ -135,6 +147,10 @@ button {
         top: 14rem;
         right: 3rem;
         min-width: 27rem;
+    }
+
+    @media only screen and (max-width: 480px) {
+        min-width: 23rem;
     }
 }
 
@@ -157,6 +173,10 @@ button {
 
     @media only screen and (max-width: 700px) {
         left: -330px;
+    }
+
+    @media only screen and (max-width: 520px) {
+        left: -230px;
     }
 
     >img {
@@ -219,5 +239,21 @@ button {
     #img-gray-join,
     #img-colored-join {
         width: 29rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    #img-gray-join,
+    #img-colored-join {
+        width: 23rem;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    span {
+        font-size: 16px;
     }
 }

@@ -14,8 +14,13 @@ section {
             top: 0;
             left: 0;
             animation: arrowMove 0.5s linear forwards;
+
+            @media only screen and (max-width: 490px) {
+                width: 10rem;
+                height: 10rem;
+            }
         }
-    } 
+    }
 }
 
 @keyframes arrowMove {
@@ -27,5 +32,35 @@ section {
     100% {
         transform: translate(60%, 60%);
         /* Endposition */
+    }
+}
+
+
+@media only screen and (max-width: 490px) {
+    section {
+        height: 16rem;
+    }
+
+    .startMovingArrow>div>img {
+        animation: arrowMoveMobile 0.5s linear forwards;
+    }
+
+    .arrow-container {
+        >img {
+            width: 10rem;
+            height: 10rem;
+        }
+    }
+}
+
+@keyframes arrowMoveMobile {
+    0% {
+        transform: translate(0, 0);
+        /* Start position */
+    }
+
+    100% {
+        transform: translate(30%, 30%);
+        /* End position for mobile */
     }
 }

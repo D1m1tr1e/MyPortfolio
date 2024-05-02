@@ -79,10 +79,19 @@ button {
     cursor: pointer;
     transition: all 125ms ease-out;
 
+    @media only screen and (max-width: 560px) {
+        font-size: 15px;
+        padding: 6px 20px 6px 20px;
+    }
+
     &:hover {
         transition: all 125ms ease-out;
         padding: 10px 40px 10px 40px;
         font-weight: bold;
+
+        @media only screen and (max-width: 560px) {
+            padding: 6px 30px 6px 30px;
+        }
     }
 }
 
@@ -96,6 +105,10 @@ button {
 
     @media only screen and (max-width: 1236px) {
         height: 65%;
+    }
+
+    @media only screen and (max-width: 520px) {
+        height: 59%;
     }
 }
 
@@ -125,19 +138,24 @@ button {
     }
 
     @media only screen and (max-width: 935px) {
-        /* top: 27rem;
-        left: -10rem;
-        max-width: 27rem;*/
         top: 14rem;
-        left: 5rem;
-        min-width: 80vw;
+        //left: 5rem;
+        //min-width: 80vw;
+        left: 3rem;
+        min-width: 85vw;
     }
 
+    @media only screen and (max-width: 600px) {
+        right: 3rem;
+        left: 1rem;
+    }
+
+    /*
     @media only screen and (max-width: 655px) {
         top: 14rem;
         left: 4rem;
         min-width: 27rem;
-    }
+    }*/
 }
 
 .arrow-container {
@@ -217,5 +235,21 @@ button {
     #img-gray-el-pollo,
     #img-colored-el-pollo {
         width: 29rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+
+    #img-gray-el-pollo,
+    #img-colored-el-pollo {
+        width: 23rem;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    span {
+        font-size: 16px;
     }
 }
