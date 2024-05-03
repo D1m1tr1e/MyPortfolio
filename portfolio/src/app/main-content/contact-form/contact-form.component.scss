@@ -176,11 +176,12 @@ input[type=submit] {
     animation: arrowBounce 2s infinite;
     cursor: pointer;
     max-width: 3rem;
+
     @media only screen and (max-width: 900px) {
-        
-            display: none;
+
+        display: none;
     }
-    
+
 }
 
 @keyframes arrowBounce {
@@ -214,8 +215,9 @@ input[type=submit] {
     border-color: rgb(218, 65, 65);
     color: rgb(172, 87, 87);
     font-family: Arial, sans-serif;
-  }
+}
 
-  .swal2-title {
-    color: #54bb42 !important; /* Beispiel für eine spezifische Stilanpassung für den Titel */
-  }
+.swal2-title {
+    color: #54bb42 !important;
+    /* Beispiel für eine spezifische Stilanpassung für den Titel */
+}

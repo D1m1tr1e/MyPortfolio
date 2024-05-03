@@ -56,15 +56,20 @@ export class ContactFormComponent {
   }
 
   succsessSentInfo() {
-    Swal.fire({
-      icon: 'success',
-      title: 'Message Sent!',
-      text: 'Your message has been successfully sent.',
-      confirmButtonText: 'OK',
-      customClass: {
-        popup: 'swal-custom-style',
-        title: 'swal2-title',
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "center",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
       }
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Message successfully sent."
     });
   }
 }
