@@ -16,11 +16,12 @@ section {
     }
 
     @media only screen and (max-width: 480px) {
-        margin: 0 3rem 0 3rem;
+        margin: 0 1rem 0 1rem;
     }
-    @media only screen and (max-width: 400px) {
+
+    /*@media only screen and (max-width: 400px) {
         margin: 0 6rem 0 6rem;
-    }
+    }*/
 }
 
 h2 {
@@ -106,7 +107,7 @@ h2 {
     }
 }
 
-.ico-layout{
+.ico-layout {
     display: flex;
     align-items: center;
     flex-direction: column;

@@ -108,7 +108,7 @@ button {
     }
 
     @media only screen and (max-width: 520px) {
-        height: 59%;
+        height: 52%;
     }
 }
 
@@ -148,6 +148,10 @@ button {
     @media only screen and (max-width: 600px) {
         right: 3rem;
         left: 1rem;
+    }
+
+    @media only screen and (max-width: 520px) {
+        top: 10rem;
     }
 
     /*
@@ -242,7 +246,7 @@ button {
 
     #img-gray-pokedex,
     #img-colored-pokedex {
-        width: 23rem;
+        width: 18rem;
     }
 
     h2 {

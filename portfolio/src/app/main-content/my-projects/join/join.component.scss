@@ -107,7 +107,7 @@ button {
     }
 
     @media only screen and (max-width: 520px) {
-        height: 59%;
+        height: 52%;
     }
 }
 
@@ -148,9 +148,22 @@ button {
         right: 3rem;
         min-width: 27rem;
     }
+    
+    @media only screen and (max-width: 520px) {
+        top: 10rem;
+    }
 
     @media only screen and (max-width: 480px) {
-        min-width: 23rem;
+        min-width: 25rem;
+    }
+
+    @media only screen and (max-width: 440px) {
+        min-width: 20rem;
+    }
+
+    @media only screen and (max-width: 440px) {
+        min-width: 18rem;
+        //left: 2.5rem;
     }
 }
 
@@ -176,7 +189,7 @@ button {
     }
 
     @media only screen and (max-width: 520px) {
-        left: -230px;
+        left: -190px;
     }
 
     >img {
@@ -246,7 +259,7 @@ button {
 
     #img-gray-join,
     #img-colored-join {
-        width: 23rem;
+        width: 18rem;
     }
 
     h2 {

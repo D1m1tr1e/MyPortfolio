@@ -108,7 +108,7 @@ button {
     }
 
     @media only screen and (max-width: 520px) {
-        height: 59%;
+        height: 52%;
     }
 }
 
@@ -150,11 +150,17 @@ button {
         left: 1rem;
     }
 
+    @media only screen and (max-width: 520px) {
+        top: 10rem;
+    }
     /*
     @media only screen and (max-width: 655px) {
         top: 14rem;
         left: 4rem;
         min-width: 27rem;
+    }
+    @media only screen and (max-width: 400px) {
+        left: 2.5rem;
     }*/
 }
 
@@ -242,7 +248,7 @@ button {
 
     #img-gray-el-pollo,
     #img-colored-el-pollo {
-        width: 23rem;
+        width: 18rem;
     }
 
     h2 {

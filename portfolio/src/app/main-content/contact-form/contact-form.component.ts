@@ -11,7 +11,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactFormComponent {
 
   checkboxIsChecked: boolean = false;
-  checkboxIsTouched: boolean = false
+ // checkboxIsTouched: boolean = false
   sendButtonClicked: boolean = false;
 
   acceptPolicy() {
@@ -30,7 +30,6 @@ export class ContactFormComponent {
       });
     }
   }
-
 
   sendMessage() {
     this.sendButtonClicked = true;
