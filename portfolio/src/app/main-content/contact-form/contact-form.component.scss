@@ -208,3 +208,14 @@ input[type=submit] {
         display: none;
     }
 }
+
+.swal-custom-style {
+    background-color: #db4444;
+    border-color: rgb(218, 65, 65);
+    color: rgb(172, 87, 87);
+    font-family: Arial, sans-serif;
+  }
+
+  .swal2-title {
+    color: #54bb42 !important; /* Beispiel für eine spezifische Stilanpassung für den Titel */
+  }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,7 +12,7 @@ import { FormsModule, NgForm } from '@angular/forms';
 export class ContactFormComponent {
 
   checkboxIsChecked: boolean = false;
- // checkboxIsTouched: boolean = false
+  // checkboxIsTouched: boolean = false
   sendButtonClicked: boolean = false;
 
   acceptPolicy() {
@@ -49,9 +50,22 @@ export class ContactFormComponent {
         email: "",
         message: ""
       };
+      this.succsessSentInfo();
       ngForm.resetForm();
     }
   }
 
-
+  succsessSentInfo() {
+    Swal.fire({
+      icon: 'success',
+      title: 'Message Sent!',
+      text: 'Your message has been successfully sent.',
+      confirmButtonText: 'OK',
+      customClass: {
+        popup: 'swal-custom-style',
+        title: 'swal2-title',
+      }
+    });
+  }
 }
+
