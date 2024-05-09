@@ -19,9 +19,9 @@
             'opacity': menuIsOpen ? '1' : '0',
             }">
         <div class="link-container">
-            <a href="#about-me" class="fontSyne700" (click)="closeMenu()">About me</a>
-            <a href="#my-skills" class="fontSyne700" (click)="closeMenu()">My Skills</a>
-            <a href="#portfolio" class="fontSyne700" (click)="closeMenu()">Portfolio</a>
+            <a href="#about-me" class="fontSyne700 underline" (click)="closeMenu()">About me</a>
+            <a href="#my-skills" class="fontSyne700 underline" (click)="closeMenu()">My Skills</a>
+            <a href="#portfolio" class="fontSyne700 underline" (click)="closeMenu()">Portfolio</a>
         </div>
 
         <div>
@@ -29,11 +29,19 @@
                 <h1 class="fontSyne800">Say Hi!</h1>
 
                 <div class="social-media-section">
-                    <span class="fontOverpass300">dimitriek&#64;hotmail.de</span>
+                    <a href="#contact-me" (click)="closeMenu()">
+                        <span class=" fontOverpass300">dimitriek&#64;hotmail.de</span>
+                    </a>
                     <div>
-                        <img src="../../../assets/img/github-icon.png" alt="">
-                        <img src="../../../assets/img/email-icon.png" alt="">
-                        <img src="../../../assets/img/linkedin-icon.png" alt="">
+                        <a href="https://github.com/D1m1tr1e" target="_blank">
+                            <img src="../../../assets/img/github-icon.png" alt="">
+                        </a>
+                        <a href="#contact-me" (click)="closeMenu()">
+                            <img src="../../../assets/img/email-icon.png" alt="">
+                        </a>
+                        <a href="https://www.linkedin.com/in/dieter-von-stein-225aa2249/" target="_blank">
+                            <img src="../../../assets/img/linkedin-icon.png" alt="">
+                        </a>
                     </div>
                 </div>
             </div>

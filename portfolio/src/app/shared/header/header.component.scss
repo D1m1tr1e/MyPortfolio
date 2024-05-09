@@ -46,6 +46,10 @@ span {
 }
 
 a {
+    text-decoration: none;
+}
+
+a.underline {
     position: relative;
     text-decoration: none;
     color: black;
@@ -74,7 +78,7 @@ a {
     }
 }
 
-a::before {
+a.underline::before {
     content: '';
     position: absolute;
     width: 50%;
@@ -87,10 +91,11 @@ a::before {
     transform-origin: left;
 }
 
-a:hover::before {
+a.underline:hover::before {
     transform: scaleX(1);
     left: 50%;
 }
+
 
 .intials {
     z-index: 999;
@@ -157,18 +162,20 @@ a:hover::before {
     padding: 0 4rem 2rem 3rem;
 
     >div {
-        >img {
-            margin-left: 3rem;
-            transition: all 125ms ease-in-out;
+        >a {
+            >img {
+                margin-left: 3rem;
+                transition: all 125ms ease-in-out;
 
-            @media only screen and (max-width: 700px) {
-                display: none;
-            }
+                @media only screen and (max-width: 700px) {
+                    display: none;
+                }
 
 
-            &:hover {
-                transition: 125ms all ease-in-out;
-                transform: scale(1.2) translateY(-20%);
+                &:hover {
+                    transition: 125ms all ease-in-out;
+                    transform: scale(1.2) translateY(-20%);
+                }
             }
         }
     }
