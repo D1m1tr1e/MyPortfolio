@@ -69,7 +69,7 @@ export class ContactFormComponent {
     });
     Toast.fire({
       icon: "success",
-      title: "Message successfully sent."
+      title: "Message sent successfully!"
     });
   }
 }

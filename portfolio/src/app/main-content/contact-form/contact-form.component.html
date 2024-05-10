@@ -32,13 +32,17 @@
             <div class="checkbox-container">
                 <input type="checkbox" (click)="acceptPolicy()" id="checkbox" name="private-policy" value="">
                 <span>
-                    I've read the <a href="imprint"> privacy policy</a> and agree to the processing of my data as
+                    I've read the
+
+                    <a href="imprint"> privacy policy</a>
+
+                    and agree to the processing of my data as
                     outlined.
                 </span>
             </div>
             @if (!checkboxIsChecked && sendButtonClicked)
             {
-                <h6>Please accept the privacy policy</h6>
+            <h6>Please accept the privacy policy</h6>
             }
 
             <input (click)="sendMessage()" id="send-btn" type="submit" value="Send message">

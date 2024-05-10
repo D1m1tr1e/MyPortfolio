@@ -24,7 +24,11 @@ p {
     }
 }
 
-a {
+a{
+    text-decoration: none;
+}
+
+a.underline {
     margin-top: 1rem;
     font-size: 16px;
     color: white;
@@ -34,7 +38,7 @@ a {
     overflow: hidden;
 }
 
-a::before {
+a.underline::before {
     content: '';
     position: absolute;
     width: 50%;
@@ -47,7 +51,7 @@ a::before {
     transform-origin: left;
 }
 
-a:hover::before {
+a.underline:hover::before {
     transform: scaleX(1);
     left: 50%;
 }

@@ -75,24 +75,35 @@ p {
     }
 }
 
-a {
-    text-decoration: none;
-    color: rgba(89, 136, 255, 1);
-    transition: all 125ms ease-in-out;
-
-    &:hover {
-        transition: all 125ms ease-in-out;
-        font-weight: bold;
-    }
-}
-
 span {
     color: white;
-    margin-left: 0.5rem;
+    margin-left: 0.2rem;
 
     @media only screen and (max-width: 620px) {
         font-size: 13px;
     }
+}
+
+a {
+    text-decoration: none;
+    color: rgba(89, 136, 255, 1);
+    position: relative; /* Stelle sicher, dass das Pseudo-Element relativ zu diesem Element positioniert ist */
+    margin: 0rem 0.2rem;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    left: 0; /* Beginne am linken Rand */
+    bottom: -2px; /* Beginne außerhalb des Sichtbereichs */
+    width: 0; /* Starte mit einer Breite von 0 */
+    height: 2px;
+    background-color: rgba(89, 136, 255, 1);
+    transition: width 0.5s ease-in-out; /* Verwende eine Übergangsanimation für die Breite */
+}
+
+a:hover::after {
+    width: 100%; /* Ändere die Breite auf 100%, um von links nach rechts zu wachsen */
 }
 
 .checkbox-contaier {
@@ -178,10 +189,8 @@ input[type=submit] {
     max-width: 3rem;
 
     @media only screen and (max-width: 900px) {
-
         display: none;
     }
-
 }
 
 @keyframes arrowBounce {
@@ -208,16 +217,4 @@ input[type=submit] {
     img {
         display: none;
     }
-}
-
-.swal-custom-style {
-    background-color: #db4444;
-    border-color: rgb(218, 65, 65);
-    color: rgb(172, 87, 87);
-    font-family: Arial, sans-serif;
-}
-
-.swal2-title {
-    color: #54bb42 !important;
-    /* Beispiel für eine spezifische Stilanpassung für den Titel */
 }
