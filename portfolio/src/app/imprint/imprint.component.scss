@@ -15,6 +15,38 @@ h4 {
     }
 }
 
+h1 {
+    font-family: 'Syne';
+    font-weight: 800;
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Syne';
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h3,
+h4 {
+    font-family: 'Overpass';
+    font-weight: 700;
+    font-size: 25px;
+}
+
+p,
+li {
+    font-family: 'Overpass';
+    font-weight: 400;
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
 .content {
     margin-top: 5rem;
 }
