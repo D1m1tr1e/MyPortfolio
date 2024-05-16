@@ -24,7 +24,7 @@ p {
     }
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -73,13 +73,15 @@ span {
         align-items: baseline;
         justify-content: flex-end;
 
-        >img {
-            margin-left: 3rem;
-            transition: all 125ms ease-in-out;
+        a {
+            >img {
+                margin-left: 3rem;
+                transition: all 125ms ease-in-out;
 
-            &:hover {
-                transition: 125ms all ease-in-out;
-                transform: scale(1.2) translateY(-20%);
+                &:hover {
+                    transition: 125ms all ease-in-out;
+                    transform: scale(1.2) translateY(-10%);
+                }
             }
         }
     }
@@ -106,13 +108,15 @@ span {
         align-items: baseline;
         justify-content: flex-end;
 
-        >img {
-            margin: 0.5rem 1rem 0.5rem 1rem;
-            transition: all 125ms ease-in-out;
+        a {
+            >img {
+                margin: 0.5rem 1rem 0.5rem 1rem;
+                transition: all 125ms ease-in-out;
 
-            &:hover {
-                transition: 125ms all ease-in-out;
-                transform: scale(1.2) translateY(-20%);
+                &:hover {
+                    transition: 125ms all ease-in-out;
+                    transform: scale(1.2) translateY(-20%);
+                }
             }
         }
     }
