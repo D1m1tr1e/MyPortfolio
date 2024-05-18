@@ -84,14 +84,14 @@ span {
     }
 }
 
-a {
+a.underline {
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
     position: relative; /* Stelle sicher, dass das Pseudo-Element relativ zu diesem Element positioniert ist */
     margin: 0rem 0.2rem;
 }
 
-a::after {
+a.underline::after {
     content: '';
     position: absolute;
     left: 0; /* Beginne am linken Rand */
@@ -102,7 +102,7 @@ a::after {
     transition: width 0.5s ease-in-out; /* Verwende eine Übergangsanimation für die Breite */
 }
 
-a:hover::after {
+a.underline:hover::after {
     width: 100%; /* Ändere die Breite auf 100%, um von links nach rechts zu wachsen */
 }
 
