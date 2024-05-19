@@ -49,7 +49,6 @@ export class ContactFormComponent {
 
   isFormCorrectlyFilledOut() {
     this.isFormValid = this.checkboxIsChecked && this.isNameValid && this.isMessageValid && this.isMailValid;
-    console.log('check pass', this.checkboxIsChecked, 'name passt', this.isNameValid, 'mail passt', this.isMailValid, 'nachricht passt', this.isMessageValid);
     const sendButton = document.getElementById('send-btn') as HTMLInputElement;
     if (sendButton) {
       sendButton.disabled = !this.isFormValid;
