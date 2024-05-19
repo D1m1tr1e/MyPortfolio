@@ -68,6 +68,10 @@ button {
     }
 }
 
+img {
+    width: 20rem;
+}
+
 .about-me-container {
     display: flex;
     justify-content: space-between;
@@ -77,16 +81,22 @@ button {
         margin: 0 1rem 0 1rem;
     }
 
-    @media only screen and (max-width: 840px) {
+    @media only screen and (max-width: 1000px) {
         flex-direction: column;
         gap: 2rem;
     }
+
+    /* @media only screen and (max-width: 840px) {
+        flex-direction: column;
+        gap: 2rem;
+    } */
 }
 
 .description-container {
     >div {
         display: flex;
         justify-content: center;
+
     }
 }
 
@@ -114,7 +124,34 @@ button {
     opacity: 0;
     transition: all ease-in-out 125ms;
 
-    @media only screen and (max-width: 840px) {
+    @media only screen and (max-width: 1280px) {
+        height: 90%;
+    }
+
+    @media only screen and (max-width: 1185px) {
+        height: 85%;
+    }
+
+    @media only screen and (max-width: 1120px) {
+        height: 80%;
+        width: 20rem;
+    }
+
+    /*@media only screen and (max-width: 1080px) {
+        height: 80%;
+        width: 20rem;
+    }*/
+
+    @media only screen and (max-width: 1055px) {
+        height: 75%;
+        //width: 20rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        height: 100%;
+    }
+
+    /*@media only screen and (max-width: 840px) {
         height: 100%;
         width: 25rem;
     }
@@ -122,17 +159,23 @@ button {
     @media only screen and (max-width: 620px) {
         height: 100%;
         width: 18rem;
-    }
+    }*/
 }
 
-@media only screen and (max-width: 1130px) {
+/*@media only screen and (max-width: 1130px) {
     img {
         width: 25rem;
     }
 }
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 860px) {
+    img {
+        width: 16rem;
+    }
+}
+
+/*@media only screen and (max-width: 620px) {
     img{
         width: 18rem;
     }
-}
+}*/
