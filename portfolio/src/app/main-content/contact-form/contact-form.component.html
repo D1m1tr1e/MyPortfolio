@@ -12,24 +12,25 @@
         <form action="action_page.php" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
             <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" type="text" id="fname" name="name"
-                placeholder="Your name" required>
+                placeholder="Your name" required (ngModelChange)="checkNameValidity(name?.valid ?? false)">
             @if (!name.valid && name.touched) {
             <h5>Your name is required</h5>
             }
 
             <input [(ngModel)]="contactData.email" #email="ngModel" type="text" id="mail" name="mail"
-                placeholder="Your mail" required pattern="[^@]+@[^\.]+\..+">
+                placeholder="Your mail" required pattern="[^@]+@[^\.]+\..+"
+                (ngModelChange)="checkMailValidity(email?.valid ?? false)">
             @if (!email.valid && email.touched) {
             <h5>Your e-mail is required</h5>
             }
 
             <textarea [(ngModel)]="contactData.message" #message="ngModel" minlength="4" id="subject" name="subject"
-                placeholder="Your message" style="height:200px" required></textarea>
+                placeholder="Your message" style="height:200px" required
+                (ngModelChange)="checkMessageValidity(message?.valid ?? false)"></textarea>
             @if (!message.valid && message.touched) {
             <h5>Yout message is empty</h5>
             }
-
-            <div class="checkbox-container">
+            <!-- <div class="checkbox-container">
                 <input type="checkbox" (click)="acceptPolicy()" id="checkbox" name="private-policy" value="">
                 <span>
                     I've read the
@@ -43,9 +44,27 @@
             @if (!checkboxIsChecked && sendButtonClicked)
             {
             <h6>Please accept the privacy policy</h6>
-            }
+            }-->
+            <div class="checkbox-container">
+                <input type="checkbox" id="checkbox" name="privatePolicy" [(ngModel)]="checkboxIsChecked"
+                    (ngModelChange)="checkCheckboxValidity($event)">
+                <span>
+                    I've read the
 
-            <input (click)="sendMessage()" id="send-btn" type="submit" value="Send message">
+                    <a class="underline" href="imprint"> privacy policy</a>
+
+                    and agree to the processing of my data as
+                    outlined.
+                </span>
+                @if (!checkboxIsChecked && sendButtonClicked)
+                {
+                <h6>Please accept the privacy policy</h6>
+                }
+            </div>
+
+
+            <input (click)="sendMessage()" id="send-btn" type="submit" value="Send message" [disabled]="!isFormValid"
+                [style.pointer-events]="isFormValid ? 'auto' : 'none'">
         </form>
     </div>
 

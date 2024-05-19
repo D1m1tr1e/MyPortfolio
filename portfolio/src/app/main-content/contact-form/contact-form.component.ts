@@ -7,33 +7,54 @@ import Swal from 'sweetalert2';
   standalone: true,
   imports: [FormsModule],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrls: ['./contact-form.component.scss']
 })
 export class ContactFormComponent {
 
   checkboxIsChecked: boolean = false;
-  // checkboxIsTouched: boolean = false
   sendButtonClicked: boolean = false;
+  isNameValid: boolean = false;
+  isMessageValid: boolean = false;
+  isMailValid: boolean = false;
+  isFormValid: boolean = false;
 
-  acceptPolicy() {
-    let checkbox = document.getElementById("checkbox") as HTMLInputElement;;
-    if (checkbox) {
-      checkbox.addEventListener("change", () => {
-        if (checkbox.checked) {
-          console.log('ok');
-          this.checkboxIsChecked = true;
-          document.getElementById('send-btn')?.classList.add('hoverIfAcceptPolicy');
-        } else {
-          console.log('nok');
-          this.checkboxIsChecked = false;
-          document.getElementById('send-btn')?.classList.remove('hoverIfAcceptPolicy');
-        }
-      });
+  checkNameValidity(isValid: boolean) {
+    this.isNameValid = isValid;
+    this.isFormCorrectlyFilledOut();
+  }
+
+  checkMessageValidity(isValid: boolean) {
+    this.isMessageValid = isValid;
+    this.isFormCorrectlyFilledOut();
+  }
+
+  checkMailValidity(isValid: boolean) {
+    this.isMailValid = isValid;
+    this.isFormCorrectlyFilledOut();
+  }
+
+  checkCheckboxValidity(isChecked: boolean) {
+    this.checkboxIsChecked = isChecked;
+    this.isFormCorrectlyFilledOut();
+  }
+
+  isFormCorrectlyFilledOut() {
+    this.isFormValid = this.checkboxIsChecked && this.isNameValid && this.isMessageValid && this.isMailValid;
+    console.log('check pass', this.checkboxIsChecked, 'name passt', this.isNameValid, 'mail passt', this.isMailValid, 'nachricht passt', this.isMessageValid);
+    const sendButton = document.getElementById('send-btn') as HTMLInputElement;
+    if (sendButton) {
+      sendButton.disabled = !this.isFormValid;
+      if (this.isFormValid) {
+        sendButton.classList.add('hoverIfAcceptPolicy');
+      } else {
+        sendButton.classList.remove('hoverIfAcceptPolicy');
+      }
     }
   }
 
   sendMessage() {
     this.sendButtonClicked = true;
+    this.isFormCorrectlyFilledOut();
   }
 
   contactData = {
@@ -43,19 +64,20 @@ export class ContactFormComponent {
   }
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && ngForm.submitted) {
-      console.log(this.contactData)
+    if (ngForm.valid && this.isFormValid) {
+      console.log(this.contactData);
       this.contactData = {
         name: "",
         email: "",
         message: ""
       };
-      this.succsessSentInfo();
+      this.successSentInfo();
       ngForm.resetForm();
+      this.resetFormState();
     }
   }
 
-  succsessSentInfo() {
+  successSentInfo() {
     const Toast = Swal.mixin({
       toast: true,
       position: "center",
@@ -72,5 +94,13 @@ export class ContactFormComponent {
       title: "Message sent successfully!"
     });
   }
-}
 
+  resetFormState() {
+    this.isNameValid = false;
+    this.isMessageValid = false;
+    this.isMailValid = false;
+    this.checkboxIsChecked = false;
+    this.sendButtonClicked = false;
+    this.isFormValid = false;
+  }
+}
