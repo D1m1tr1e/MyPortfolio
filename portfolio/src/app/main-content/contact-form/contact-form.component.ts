@@ -89,7 +89,7 @@ export class ContactFormComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => console.info(),
         });
       this.successSentInfo();
       ngForm.resetForm();
