@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import Swal from 'sweetalert2';
 
@@ -11,12 +12,20 @@ import Swal from 'sweetalert2';
 })
 export class ContactFormComponent {
 
+  http = inject(HttpClient);
+
   checkboxIsChecked: boolean = false;
   sendButtonClicked: boolean = false;
   isNameValid: boolean = false;
   isMessageValid: boolean = false;
   isMailValid: boolean = false;
   isFormValid: boolean = false;
+
+  contactData = {
+    name: "",
+    email: "",
+    message: ""
+  }
 
   checkNameValidity(isValid: boolean) {
     this.isNameValid = isValid;
@@ -57,20 +66,35 @@ export class ContactFormComponent {
     this.isFormCorrectlyFilledOut();
   }
 
-  contactData = {
-    name: "",
-    email: "",
-    message: ""
-  }
+  mailTest = true;
+
+  post = {
+    endPoint: 'https://dieter-von-stein.com/sendMail.php',
+    body: (payload: any) => JSON.stringify(payload),
+    options: {
+      headers: {
+        'Content-Type': 'text/plain',
+        responseType: 'text',
+      },
+    },
+  };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.valid && this.isFormValid) {
-      console.log(this.contactData);
-      this.contactData = {
-        name: "",
-        email: "",
-        message: ""
-      };
+    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+        .subscribe({
+          next: (response) => {
+            console.log('Response:', response);
+            this.successSentInfo();
+            ngForm.resetForm();
+            this.resetFormState();
+          },
+          error: (error) => {
+            console.error('Error:', error);
+          },
+          complete: () => console.info('send post complete'),
+        });
+    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.successSentInfo();
       ngForm.resetForm();
       this.resetFormState();
