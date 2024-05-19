@@ -72,10 +72,11 @@ a.underline {
     }
 
     @media only screen and (max-width: 450px) {
-        width: 80vw;
+       /*width: 80vw;
         left: 41%;
         right: 50%;
-        transform: translate(-24%, 50%);
+        transform: translate(-24%, 50%);*/
+        font-size: 28px;
     }
 }
 

@@ -70,6 +70,10 @@ button {
 
 img {
     width: 20rem;
+
+    @media only screen and (max-width: 1480px) {
+        width: 14rem;
+    }
 }
 
 .about-me-container {
@@ -150,6 +154,11 @@ img {
     @media only screen and (max-width: 1000px) {
         height: 100%;
     }
+
+    @media only screen and (max-width: 420px) {
+        width: 14rem;
+    }
+
 
     /*@media only screen and (max-width: 840px) {
         height: 100%;

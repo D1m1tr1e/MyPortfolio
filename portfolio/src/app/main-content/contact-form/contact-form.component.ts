@@ -65,7 +65,7 @@ export class ContactFormComponent {
     this.isFormCorrectlyFilledOut();
   }
 
-  mailTest = true;
+  mailTest: boolean = false;
 
   post = {
     endPoint: 'https://dieter-von-stein.com/sendMail.php',
@@ -79,21 +79,18 @@ export class ContactFormComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData), this.post.options)
+    if (ngForm.valid && this.isFormValid && !this.mailTest) {
+      this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            console.log('Response:', response);
-            this.successSentInfo();
+
             ngForm.resetForm();
-            this.resetFormState();
           },
           error: (error) => {
-            console.error('Error:', error);
+            console.error(error);
           },
           complete: () => console.info('send post complete'),
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       this.successSentInfo();
       ngForm.resetForm();
       this.resetFormState();
