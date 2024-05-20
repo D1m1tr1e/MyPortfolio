@@ -5,19 +5,20 @@ section {
         border: 3px solid black;
         position: relative;
         padding: 10rem 5rem 10rem 5rem;
+        margin: 0 1rem 0 1rem;
 
         @media only screen and (max-width: 1480px) {
             padding: 5rem 2rem 5rem 2rem !important;
         }
     }
 
-    @media only screen and (max-width: 1480px) {
+    /*@media only screen and (max-width: 1480px) {
         margin: 0 1rem 0 1rem;
     }
 
     @media only screen and (max-width: 480px) {
         margin: 0 1rem 0 1rem;
-    }
+    }*/
 
     /*@media only screen and (max-width: 400px) {
         margin: 0 6rem 0 6rem;
