@@ -1,9 +1,9 @@
 section {
     display: flex;
     position: relative;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-direction: row-reverse;
-    max-width: 1440px;
+    gap: 7rem;
 
     >.image-container {
         padding: 7rem 0 5rem 0;
@@ -13,9 +13,18 @@ section {
         align-items: center;
     }
 
-    @media only screen and (max-width: 1480px) {
-        margin: 0 1rem 0 1rem;
+    @media only screen and (max-width: 2040px) {
+        gap: 11rem;
     }
+
+    @media only screen and (max-width: 1800px) {
+        gap: 22rem;
+    }
+
+    @media only screen and (max-width: 1520px) {
+        justify-content: space-around;
+    }
+
 
     &:hover {
         .image-container .imageBorder {
@@ -118,7 +127,7 @@ button {
     position: absolute;
     top: 8rem;
     opacity: 0;
-    left: 35%;
+    left: 45%;
     max-width: 30rem;
     transition: transform 0.5s ease;
 
@@ -132,26 +141,30 @@ button {
     }
 
     @media only screen and (max-width: 1080px) {
+        top: 4.5rem;
         max-width: 20rem;
         left: 40%;
     }
 
     @media only screen and (max-width: 935px) {
-        /*   top: 14rem;
-        left: 5rem;
-        min-width: 80vw;*/
         top: 14rem;
-        left: 3rem;
+        left: 5rem;
+        //min-width: 80vw;
+        //left: 3rem;
         min-width: 85vw;
     }
 
     @media only screen and (max-width: 600px) {
+        top: 14rem;
         right: 3rem;
-        left: 1rem;
+        left: 4rem;
+        min-width: 27rem;
     }
 
     @media only screen and (max-width: 520px) {
-        top: 9rem;
+        top: 10rem;
+        right: 1rem;
+        min-width: 18rem;
     }
 
     /*
@@ -160,6 +173,13 @@ button {
         left: 4rem;
         min-width: 27rem;
     }*/
+    @media only screen and (max-width: 390px) {
+        left: 2.5rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+        left: 1rem;
+    }
 }
 
 .arrow-container {
