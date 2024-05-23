@@ -1,17 +1,24 @@
 section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 0.5rem 0;
-    width: 100%;
-    max-width: 1440px; /* Optional: Begrenzen Sie die maximale Breite */
-    margin: 0 auto; /* Zentriert den Header */
+    width: 100vw;
     position: fixed;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     background-color: rgba(255, 252, 243, 1);
     z-index: 1;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -21,32 +28,15 @@ h1 {
     margin-bottom: 0.3rem;
     width: 27rem;
     transition: all 125ms ease-in-out;
+}
 
-    @media only screen and (max-width: 1060px) {
-        font-size: 60px;
-    }
-
-    @media only screen and (max-width: 665px) {
-        font-size: 50px;
-    }
-
-    @media only screen and (max-width: 560px) {
-        font-size: 40px;
-    }
-
-    &:hover {
-        transition: all 125ms ease-in-out;
-        color: rgba(89, 136, 255, 1);
-    }
+h1:hover {
+    color: rgba(89, 136, 255, 1);
 }
 
 span {
     color: white;
     font-size: 23px;
-
-    @media only screen and (max-width: 665px) {
-        font-size: 15px;
-    }
 }
 
 a {
@@ -62,27 +52,6 @@ a.underline {
     margin-bottom: 3.5rem;
     display: inline-block;
     overflow: hidden;
-
-    @media only screen and (max-width: 1060px) {
-        font-size: 60px;
-    }
-
-    @media only screen and (max-width: 665px) {
-        font-size: 50px;
-    }
-
-    @media only screen and (max-width: 560px) {
-        font-size: 40px;
-    }
-
-    @media only screen and (max-width: 450px) {
-       /*width: 80vw;
-        left: 41%;
-        right: 50%;
-        transform: translate(-24%, 50%);*/
-
-        font-size: 28px;
-    }
 }
 
 a.underline::before {
@@ -102,7 +71,6 @@ a.underline:hover::before {
     transform: scaleX(1);
     left: 50%;
 }
-
 
 .intials {
     z-index: 999;
@@ -142,24 +110,35 @@ a.underline:hover::before {
     min-height: 100dvh;
     background-color: rgba(255, 252, 243, 1);
     flex-direction: column;
+}
 
-    >.link-container {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        position: fixed;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+.menu-container .link-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .contact-menu-container {
     position: absolute;
     bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url('../../../assets/img/bg-contact-section.png');
-    width: 100%;
-    padding-top: 2rem;
+    width: 100vw;
+    padding-top: 10rem;
+
+    @media only screen and (max-width: 2170px) {
+        padding-top: 7rem;
+    }
+
+    @media only screen and (max-width: 1780px) {
+        padding-top: 5rem;
+    }
+    
 }
 
 .social-media-section {
@@ -167,34 +146,64 @@ a.underline:hover::before {
     justify-content: space-between;
     align-items: center;
     padding: 0 4rem 2rem 3rem;
+}
 
-    >div {
-        >a {
-            >img {
-                margin-left: 3rem;
-                transition: all 125ms ease-in-out;
+.social-media-section > div > a > img {
+    margin-left: 3rem;
+    transition: all 125ms ease-in-out;
 
-                @media only screen and (max-width: 700px) {
-                    display: none;
-                }
-
-                &:hover {
-                    transition: 125ms all ease-in-out;
-                    transform: scale(1.2) translateY(-20%);
-                }
-            }
-        }
+    @media only screen and (max-width: 700px) {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 1480px) {
+.social-media-section > div > a > img:hover {
+    transform: scale(1.2) translateY(-20%);
+}
 
+@media only screen and (max-width: 1480px) {
     .intials,
     .btn-container {
-        margin: 0 1rem 0 1rem;
+        margin: 0 1rem;
+    }
+}
+
+@media only screen and (max-width: 1060px) {
+    h1 {
+        font-size: 60px;
+    }
+    a.underline {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 665px) {
+    h1 {
+        font-size: 50px;
+    }
+    span {
+        font-size: 15px;
+    }
+    a.underline {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    h1 {
+        font-size: 40px;
+    }
+    a.underline {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    a.underline {
+        font-size: 28px;
     }
 }
 
 .d-none {
-    display: none
+    display: none;
 }
