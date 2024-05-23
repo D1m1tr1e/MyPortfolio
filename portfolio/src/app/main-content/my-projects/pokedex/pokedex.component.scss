@@ -25,6 +25,9 @@ section {
         justify-content: space-around;
     }
 
+    @media only screen and (max-width: 960px) {
+        gap: 19rem;
+    }
 
     &:hover {
         .image-container .imageBorder {

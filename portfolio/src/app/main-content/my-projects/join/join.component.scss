@@ -24,6 +24,10 @@ section {
         justify-content: space-around;
     }
 
+    @media only screen and (max-width: 960px) {
+        gap: 19rem;
+    }
+
     &:hover {
         .image-container .imageBorder {
             opacity: 1;
@@ -147,7 +151,7 @@ button {
         top: 14rem;
         right: 3rem;
         left: 5rem;
-        min-width: 85vw;
+        min-width: 80vw;
     }
 
     @media only screen and (max-width: 560px) {
