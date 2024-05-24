@@ -88,27 +88,37 @@ span {
 a.underline {
     text-decoration: none;
     color: rgba(89, 136, 255, 1);
-    position: relative; /* Stelle sicher, dass das Pseudo-Element relativ zu diesem Element positioniert ist */
+    position: relative;
+    /* Stelle sicher, dass das Pseudo-Element relativ zu diesem Element positioniert ist */
     margin: 0rem 0.2rem;
 }
 
 a.underline::after {
     content: '';
     position: absolute;
-    left: 0; /* Beginne am linken Rand */
-    bottom: -2px; /* Beginne außerhalb des Sichtbereichs */
-    width: 0; /* Starte mit einer Breite von 0 */
+    left: 0;
+    /* Beginne am linken Rand */
+    bottom: -2px;
+    /* Beginne außerhalb des Sichtbereichs */
+    width: 0;
+    /* Starte mit einer Breite von 0 */
     height: 2px;
     background-color: rgba(89, 136, 255, 1);
-    transition: width 0.5s ease-in-out; /* Verwende eine Übergangsanimation für die Breite */
+    transition: width 0.5s ease-in-out;
+    /* Verwende eine Übergangsanimation für die Breite */
 }
 
 a.underline:hover::after {
-    width: 100%; /* Ändere die Breite auf 100%, um von links nach rechts zu wachsen */
+    width: 100%;
+    /* Ändere die Breite auf 100%, um von links nach rechts zu wachsen */
 }
 
 .checkbox-contaier {
     display: flex;
+}
+
+#checkbox {
+    cursor: pointer;
 }
 
 input[type=text],
