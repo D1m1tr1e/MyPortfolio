@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
 
   menuIsOpen: boolean = false;
+  enOff: string = '';
+  deOff: string = 'none';
 
   openMenu() {
     let menuElement = document.getElementById('menu-btn');
@@ -31,6 +33,18 @@ export class HeaderComponent {
     if (menuElement) {
       menuElement.classList.toggle("change");
     }
+  }
+
+  switchToEnglish() {
+    this.enOff = 'none';
+    this.deOff = '';
+    // Fügen Sie hier die Logik zum Umschalten der Sprache hinzu, z.B. this.translateService.use('en');
+  }
+
+  switchToGerman() {
+    this.enOff = '';
+    this.deOff = 'none';
+    // Fügen Sie hier die Logik zum Umschalten der Sprache hinzu, z.B. this.translateService.use('de');
   }
 }
 

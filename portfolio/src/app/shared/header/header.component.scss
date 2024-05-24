@@ -11,7 +11,7 @@ section {
     z-index: 1;
 }
 
-.container {
+.button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -19,6 +19,19 @@ section {
     max-width: 1440px;
     padding: 0 1rem;
     box-sizing: border-box;
+}
+
+.translation-container{
+    z-index: 999;
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    font-family: 'Syne';
+    font-weight: 400;
 }
 
 h1 {
