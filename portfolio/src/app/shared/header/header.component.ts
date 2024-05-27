@@ -49,11 +49,11 @@ export class HeaderComponent {
   changeClassForLanguage(eventLanguage: any) {
 
     if (eventLanguage == 'en') {
-      this.en = 'none';
-      this.de = '';
-    } else if (eventLanguage == 'de') {
       this.de = 'none';
       this.en = '';
+    } else if (eventLanguage == 'de') {
+      this.en = 'none';
+      this.de = '';
     }
   }
 }
