@@ -1,19 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { LangChangeEvent } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { MainTranslationService } from '../../main-translation.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  constructor(private translate: TranslateService) { };
+  translateData = inject(MainTranslationService);
 
   menuIsOpen: boolean = false;
-  enOff: string = '';
-  deOff: string = 'none';
+  en: string = '';
+  de: string = 'none';
 
   openMenu() {
     let menuElement = document.getElementById('menu-btn');
@@ -35,16 +40,21 @@ export class HeaderComponent {
     }
   }
 
-  switchToEnglish() {
-    this.enOff = 'none';
-    this.deOff = '';
-    // Fügen Sie hier die Logik zum Umschalten der Sprache hinzu, z.B. this.translateService.use('en');
+  ngOnInit() {
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
+      this.changeClassForLanguage(event.lang);
+    });
   }
 
-  switchToGerman() {
-    this.enOff = '';
-    this.deOff = 'none';
-    // Fügen Sie hier die Logik zum Umschalten der Sprache hinzu, z.B. this.translateService.use('de');
+  changeClassForLanguage(eventLanguage: any) {
+
+    if (eventLanguage == 'en') {
+      this.en = 'none';
+      this.de = '';
+    } else if (eventLanguage == 'de') {
+      this.de = 'none';
+      this.en = '';
+    }
   }
 }
 

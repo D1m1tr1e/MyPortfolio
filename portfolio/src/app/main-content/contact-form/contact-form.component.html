@@ -1,10 +1,10 @@
 <section>
-    <h1 class="fontSyne800">Say Hi!</h1>
+    <h1 class="fontSyne800">{{'sayHi' | translate }}</h1>
 
     <div class="form-title">
-        <h3 class="fontOverpass700">Want to discuss a new project?</h3>
+        <h3 class="fontOverpass700">{{'contactFirstText' | translate }}</h3>
         <div>
-            <p class="fontOverpass400">Say hello! let's discuss your ideas and make it happen</p>
+            <p class="fontOverpass400">{{'contactSecondText' | translate }}</p>
         </div>
     </div>
 
@@ -12,49 +12,34 @@
         <form action="action_page.php" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
             <input [(ngModel)]="contactData.name" #name="ngModel" minlength="3" type="text" id="fname" name="name"
-                placeholder="Your name" required (ngModelChange)="checkNameValidity(name?.valid ?? false)">
+                placeholder="{{'yourName' | translate }}" required
+                (ngModelChange)="checkNameValidity(name?.valid ?? false)">
             @if (!name.valid && name.touched) {
-            <h5>Your name is required</h5>
+            <h5>{{'yourNameRequired' | translate }}</h5>
             }
 
             <input [(ngModel)]="contactData.email" #email="ngModel" type="text" id="mail" name="mail"
-                placeholder="Your mail" required pattern="[^@]+@[^\.]+\..+"
+                placeholder="{{'yourEmail' | translate }}" required pattern="[^@]+@[^\.]+\..+"
                 (ngModelChange)="checkMailValidity(email?.valid ?? false)">
             @if (!email.valid && email.touched) {
-            <h5>Your e-mail is required</h5>
+            <h5>{{'emailRequired' | translate }}</h5>
             }
 
             <textarea [(ngModel)]="contactData.message" #message="ngModel" minlength="4" id="subject" name="subject"
-                placeholder="Your message" style="height:200px" required
+                placeholder="{{'yourMessage' | translate }}" style="height:200px" required
                 (ngModelChange)="checkMessageValidity(message?.valid ?? false)"></textarea>
             @if (!message.valid && message.touched) {
-            <h5>Yout message is empty</h5>
+            <h5>{{'yourMessageRequired' | translate }}</h5>
             }
-            <!-- <div class="checkbox-container">
-                <input type="checkbox" (click)="acceptPolicy()" id="checkbox" name="private-policy" value="">
-                <span>
-                    I've read the
-
-                    <a class="underline" href="imprint"> privacy policy</a>
-
-                    and agree to the processing of my data as
-                    outlined.
-                </span>
-            </div>
-            @if (!checkboxIsChecked && sendButtonClicked)
-            {
-            <h6>Please accept the privacy policy</h6>
-            }-->
             <div class="checkbox-container">
                 <input type="checkbox" id="checkbox" name="privatePolicy" [(ngModel)]="checkboxIsChecked"
                     (ngModelChange)="checkCheckboxValidity($event)">
                 <span>
-                    I've read the
+                    {{'checkBoxFirstText' | translate }}
 
-                    <a class="underline" href="imprint"> privacy policy</a>
+                    <a class="underline" href="imprint">{{'privacyPolicy' | translate }}</a>
 
-                    and agree to the processing of my data as
-                    outlined.
+                    {{'checkBoxLastText' | translate }}
                 </span>
                 @if (!checkboxIsChecked && sendButtonClicked)
                 {
@@ -63,7 +48,7 @@
             </div>
 
 
-            <input (click)="sendMessage()" id="send-btn" type="submit" value="Send message" [disabled]="!isFormValid"
+            <input (click)="sendMessage()" id="send-btn" type="submit" value="{{'sendMessageButton' | translate }}" [disabled]="!isFormValid"
                 [style.pointer-events]="isFormValid ? 'auto' : 'none'">
         </form>
     </div>
