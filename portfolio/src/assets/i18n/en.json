@@ -20,7 +20,7 @@
   "emailInvalid": "Please enter a valid email address",
   "yourMessage": "Your message",
   "yourMessageRequired": "Your message is empty",
-  "checskBoxFirstText": "I've read the",
+  "checkBoxFirstText": "I've read the",
   "privacyPolicy": "Privacy Policy",
   "checkBoxLastText": "and agree to the processing of my data as outlined.",
   "sendMessageButton": "Send message",

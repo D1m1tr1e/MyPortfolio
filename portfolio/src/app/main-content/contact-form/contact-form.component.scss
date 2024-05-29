@@ -15,9 +15,9 @@ section {
 h1 {
     color: white;
     font-size: 78px;
-    padding: 5rem 0 0 3rem;
+    padding: 6rem 0 0 3rem;
     transition: all 125ms ease-in-out;
-    max-width: 27rem;
+    //max-width: 27rem;
 
     &:hover {
         transition: all 125ms ease-in-out;
@@ -28,12 +28,24 @@ h1 {
         font-size: 67px;
     }
 
+    @media only screen and (max-width: 1000px) {
+        font-size: 54px;
+    }
+
     @media only screen and (max-width: 860px) {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     @media only screen and (max-width: 620px) {
         font-size: 38px;
+    }
+
+    @media only screen and (max-width: 430px) {
+        font-size: 30px;
+    }
+
+    @media only screen and (max-width: 350px) {
+        font-size: 25px;
     }
 }
 
@@ -45,21 +57,25 @@ h3 {
     @media only screen and (max-width: 620px) {
         font-size: 20px;
     }
+
+    @media only screen and (max-width: 445px) {
+        text-align: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
 }
 
 h5 {
     position: absolute;
     color: red;
     margin-top: -1rem;
-    font-style: italic;
-    font-size: 13px;
+    font-size: 16px;
 }
 
 h6 {
     position: absolute;
     color: red;
     margin-top: 0.1rem;
-    font-style: italic;
     font-size: 13px;
 }
 
@@ -71,14 +87,23 @@ p {
         font-size: 15px;
     }
 
+    @media only screen and (max-width: 445px) {
+        text-align: center;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
     @media only screen and (max-width: 390px) {
         font-size: 13px;
     }
+
 }
 
 span {
     color: white;
     margin-left: 0.2rem;
+    font-family: "Overpass";
+    font-weight: 400;
 
     @media only screen and (max-width: 620px) {
         font-size: 13px;
@@ -113,12 +138,11 @@ a.underline:hover::after {
     /* Ändere die Breite auf 100%, um von links nach rechts zu wachsen */
 }
 
-.checkbox-contaier {
-    display: flex;
-}
 
 #checkbox {
     cursor: pointer;
+    margin-top: 1rem;
+
 }
 
 input[type=text],
@@ -130,7 +154,7 @@ textarea {
     border-bottom: 1px solid white;
     box-sizing: border-box;
     margin-top: 6px;
-    margin-bottom: 16px;
+    margin-bottom: 19px;
     resize: vertical;
     color: white;
     background-color: black !important;

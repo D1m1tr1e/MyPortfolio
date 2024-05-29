@@ -3,13 +3,13 @@
     <div class="button-container">
         <div class="intials">
             <a href="#header">
-                <h2>[DvS]</h2>
+                <h2 class="fontSyne400">[DvS]</h2>
             </a>
         </div>
 
         <div class="translation-container">
-            <button [ngStyle]="{display: de}" (click)="translateData.translateEnglish()">EN</button>
-            <button [ngStyle]="{display: en}" (click)="translateData.translateGerman()">DE</button>
+            <button class="fontSyne400" [ngStyle]="{display: de}" (click)="translateData.translateEnglish()">EN</button>
+            <button class="fontSyne400" [ngStyle]="{display: en}" (click)="translateData.translateGerman()">DE</button>
         </div>
 
         <div class=" btn-container" id="menu-btn" (click)="openMenu()">

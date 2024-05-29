@@ -34,19 +34,18 @@
             <div class="checkbox-container">
                 <input type="checkbox" id="checkbox" name="privatePolicy" [(ngModel)]="checkboxIsChecked"
                     (ngModelChange)="checkCheckboxValidity($event)">
-                <span>
+                <span class="fontOverpass400">
                     {{'checkBoxFirstText' | translate }}
 
-                    <a class="underline" href="imprint">{{'privacyPolicy' | translate }}</a>
+                    <a class="underline fontOverpass400" href="imprint">{{'privacyPolicy' | translate }}</a>
 
                     {{'checkBoxLastText' | translate }}
                 </span>
                 @if (!checkboxIsChecked && sendButtonClicked)
                 {
-                <h6>Please accept the privacy policy</h6>
+                <h6 class="fontOverpass400">Please accept the privacy policy</h6>
                 }
             </div>
-
 
             <input (click)="sendMessage()" id="send-btn" type="submit" value="{{'sendMessageButton' | translate }}" [disabled]="!isFormValid"
                 [style.pointer-events]="isFormValid ? 'auto' : 'none'">

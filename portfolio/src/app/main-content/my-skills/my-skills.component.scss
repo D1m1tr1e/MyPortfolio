@@ -12,18 +12,6 @@ section {
             padding: 5rem 2rem 5rem 2rem !important;
         }
     }
-
-    /*@media only screen and (max-width: 1480px) {
-        margin: 0 1rem 0 1rem;
-    }
-
-    @media only screen and (max-width: 480px) {
-        margin: 0 1rem 0 1rem;
-    }*/
-
-    /*@media only screen and (max-width: 400px) {
-        margin: 0 6rem 0 6rem;
-    }*/
 }
 
 h2 {
@@ -41,17 +29,32 @@ h2 {
 
     @media only screen and (max-width: 1300px) {
         font-size: 67px;
-        width: 28rem;
+        //width: 28rem;
+    }
+
+    @media only screen and (max-width: 1000px) {
+        font-size: 54px;
+        //width: 31rem;
     }
 
     @media only screen and (max-width: 860px) {
-        font-size: 50px;
-        width: 21rem;
+        font-size: 40px;
+        //width: 31rem;
     }
 
     @media only screen and (max-width: 620px) {
         font-size: 38px;
-        width: 18rem;
+        width: 21rem;
+    }
+
+    @media only screen and (max-width: 430px) {
+        font-size: 30px;
+        width: 17rem;
+    }
+
+    @media only screen and (max-width: 350px) {
+        font-size: 25px;
+        width: 15rem;
     }
 }
 
