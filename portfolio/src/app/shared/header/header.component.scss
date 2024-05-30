@@ -21,8 +21,18 @@ section {
     box-sizing: border-box;
 }
 
-.translation-container{
+.btn-translation-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.translation-container {
+    margin-right: 1rem;
     z-index: 999;
+
+    @media only screen and (max-width: 1480px) {
+        margin-right: unset;
+    }
 }
 
 button{
@@ -30,6 +40,7 @@ button{
     border: none;
     background-color: transparent;
     font-size: 25px;
+    color: black;
 }
 
 h1 {
