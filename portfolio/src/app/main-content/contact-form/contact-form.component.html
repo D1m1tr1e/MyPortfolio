@@ -15,21 +15,21 @@
                 placeholder="{{'yourName' | translate }}" required
                 (ngModelChange)="checkNameValidity(name?.valid ?? false)">
             @if (!name.valid && name.touched) {
-            <h5>{{'yourNameRequired' | translate }}</h5>
+            <h5 class="fontSyne400">{{'yourNameRequired' | translate }}</h5>
             }
 
             <input [(ngModel)]="contactData.email" #email="ngModel" type="text" id="mail" name="mail"
                 placeholder="{{'yourEmail' | translate }}" required pattern="[^@]+@[^\.]+\..+"
                 (ngModelChange)="checkMailValidity(email?.valid ?? false)">
             @if (!email.valid && email.touched) {
-            <h5>{{'emailRequired' | translate }}</h5>
+            <h5 class="fontSyne400">{{'emailRequired' | translate }}</h5>
             }
 
             <textarea [(ngModel)]="contactData.message" #message="ngModel" minlength="4" id="subject" name="subject"
                 placeholder="{{'yourMessage' | translate }}" style="height:200px" required
                 (ngModelChange)="checkMessageValidity(message?.valid ?? false)"></textarea>
             @if (!message.valid && message.touched) {
-            <h5>{{'yourMessageRequired' | translate }}</h5>
+            <h5 class="fontSyne400">{{'yourMessageRequired' | translate }}</h5>
             }
             <div class="checkbox-container">
                 <input type="checkbox" id="checkbox" name="privatePolicy" [(ngModel)]="checkboxIsChecked"
