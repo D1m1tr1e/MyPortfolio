@@ -6,7 +6,6 @@ section {
 }
 
 h1 {
-   // max-width: 40rem;
     font-size: 78px;
     transition: all 125ms ease-in-out;
 
@@ -106,21 +105,14 @@ img {
         flex-direction: column;
         gap: 2rem;
     }
-
-    /* @media only screen and (max-width: 840px) {
-        flex-direction: column;
-        gap: 2rem;
-    } */
 }
 
 .description-container {
     >div {
         display: flex;
         justify-content: center;
-
     }
 }
-
 
 .aboutMeImage {
     display: flex;
@@ -158,11 +150,6 @@ img {
         width: 20rem;
     }
 
-    /*@media only screen and (max-width: 1080px) {
-        height: 80%;
-        width: 20rem;
-    }*/
-
     @media only screen and (max-width: 1055px) {
         height: 75%;
         //width: 20rem;
@@ -175,33 +162,4 @@ img {
     @media only screen and (max-width: 420px) {
         width: 14rem;
     }
-
-
-    /*@media only screen and (max-width: 840px) {
-        height: 100%;
-        width: 25rem;
-    }
-
-    @media only screen and (max-width: 620px) {
-        height: 100%;
-        width: 18rem;
-    }*/
 }
-
-/*@media only screen and (max-width: 1130px) {
-    img {
-        width: 25rem;
-    }
-}
-
-@media only screen and (max-width: 860px) {
-    img {
-        width: 16rem;
-    }
-}
-
-/*@media only screen and (max-width: 620px) {
-    img{
-        width: 18rem;
-    }
-}*/

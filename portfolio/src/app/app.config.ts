@@ -8,7 +8,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { importProvidersFrom } from '@angular/core';
 
-// required for AoT 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return  new  TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
@@ -24,7 +23,7 @@ export const provideTranslation = () => ({
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAnimations(), // required animations providers
+    provideAnimations(),
     provideHttpClient(),
     importProvidersFrom([
       HttpClientModule, 

@@ -24,12 +24,10 @@ section {
 @keyframes arrowMove {
     0% {
         transform: translate(0, 0);
-        /* Startposition */
     }
 
     100% {
         transform: translate(60%, 60%);
-        /* Endposition */
     }
 }
 
@@ -54,11 +52,9 @@ section {
 @keyframes arrowMoveMobile {
     0% {
         transform: translate(0, 0);
-        /* Start position */
     }
 
     100% {
         transform: translate(30%, 30%);
-        /* End position for mobile */
     }
 }
