@@ -64,6 +64,39 @@ section {
     }
 }
 
+@media only screen and (max-width: 820px) {
+    .image-container .imageBorder,
+    .image-container .arrow-container,
+    .projectDescription {
+        opacity: 1;
+        transition: none; /* Transition entfernen, um statisch zu bleiben */
+    }
+
+    .image-container .imageBorder {
+        transform: translate(-10px, -0px);
+    }
+
+    .arrow-container > img {
+        transform: scale(1.5) rotate(-130deg);
+
+        @media only screen and (max-width: 935px) {
+            rotate: (90deg);
+        }
+    }
+
+    .projectDescription {
+        transform: translateX(-50%);
+
+        @media only screen and (max-width: 935px) {
+            transform: translateY(120%);
+        }
+
+        @media only screen and (max-width: 700px) {
+            transform: translateY(75%);
+        }
+    }
+}
+
 h1 {
     font-size: 48px;
 }
@@ -152,6 +185,10 @@ button {
         right: 3rem;
         left: 5rem;
         min-width: 80vw;
+    }
+
+    @media only screen and (max-width: 820px) {
+        opacity: 1;
     }
 
     @media only screen and (max-width: 560px) {
@@ -259,8 +296,17 @@ button {
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 820px) {
+    #img-colored-join {
+        display: block;
+    }
 
+    #img-gray-join {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 700px) {
     #img-gray-join,
     #img-colored-join {
         width: 29rem;
@@ -268,7 +314,6 @@ button {
 }
 
 @media only screen and (max-width: 520px) {
-
     #img-gray-join,
     #img-colored-join {
         width: 18rem;
